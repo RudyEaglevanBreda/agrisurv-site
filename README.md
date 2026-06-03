@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AgriSurv — marketing website
 
-## Getting Started
+Marketing site for **AgriSurv**, a drone-based NDVI crop-stress analysis service
+for South African farmers. Built with **Next.js 16 + React 19 + Tailwind CSS v4**.
 
-First, run the development server:
+It's a single, responsive landing page with: hero, services, how-it-works,
+sample NDVI deliverable, equipment, pricing, about, FAQ and a contact form
+(with WhatsApp + email). Everything is statically pre-rendered.
+
+**Bilingual (English / Afrikaans).** A header toggle switches the whole site
+instantly and remembers the visitor's choice (`localStorage`). English is the
+default and stays server-rendered for SEO. All copy lives in
+**`src/lib/dictionaries.ts`** — edit the `en` and `af` objects to change wording.
+The two must have identical keys (TypeScript enforces this at build time), so
+add any new string to **both** languages.
+
+---
+
+## ⚙️ Before you launch — replace the placeholders
+
+All site-wide content lives in **`src/lib/site.ts`**. Search for `{{ }}` tokens
+and replace them:
+
+| Placeholder | Where | What to put |
+|---|---|---|
+| `{{WHATSAPP_NUMBER}}` | `src/lib/site.ts` | WhatsApp number, **international format, digits only** (e.g. `27821234567`) |
+| `{{PHONE_DISPLAY}}` | `src/lib/site.ts` | Human-readable phone (e.g. `+27 82 123 4567`). *Until set, the phone contact card is automatically hidden.* |
+| `{{FORMSPREE_ID}}` | `src/lib/site.ts` | A free form ID from [formspree.io](https://formspree.io). *Until set, the contact form falls back to opening the visitor's email app pre-filled.* |
+
+Other content to review:
+
+- **Pricing** — figures in `src/components/Pricing.tsx` are **indicative ZAR placeholders**. Update the `price` / `unit` values to your real rates.
+- **Equipment** — specs in `src/components/Equipment.tsx` describe a typical pro multispectral setup. Confirm/swap for your exact drone + sensor.
+- **About / team** — `src/components/About.tsx` has a `TODO` to add founder/operator bios + photos.
+- **Email** is already set to `info@technosurveys.co.za`. Domain is `agrisurv.co.za`.
+
+### Hooking up the contact form (recommended)
+
+1. Create a free form at [formspree.io](https://formspree.io) and point it at `info@technosurveys.co.za`.
+2. Paste the form ID into `formspreeId` in `src/lib/site.ts`.
+3. Done — submissions now email you, with a success state shown to the visitor.
+
+---
+
+## 🚀 Run it
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install      # first time only
+npm run dev      # http://localhost:3000
+npm run build    # production build
+npm start        # serve the production build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ☁️ Deploy
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This is a standard Next.js app and deploys with zero config to **Vercel**
+(recommended) or **Netlify**:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Vercel:** import the repo → it auto-detects Next.js → deploy. Then add the
+  `agrisurv.co.za` domain in the project's Domains settings.
+- **Netlify:** build command `npm run build`, the Next.js plugin handles the rest.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🎨 Brand & design notes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Palette** (from the logo) is defined as Tailwind tokens in `src/app/globals.css`:
+  `forest-*` (deep green), `leaf-*` (bright green), `soil-*` (brown).
+- **Fonts:** Sora (display) + Inter (body), loaded via `next/font`.
+- **Logo:** `public/agrisurv-logo.png` — trimmed & compressed to 55 KB from the
+  original 1.5 MB export. The original is kept in the parent folder.
+- The **NDVI heat-map visuals** (hero + sample report) are generated SVGs
+  (`src/components/NdviField.tsx`) — no image files, infinitely crisp. Swap in
+  a real exported NDVI map any time you have one.

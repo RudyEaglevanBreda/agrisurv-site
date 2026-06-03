@@ -1,26 +1,138 @@
 @import "tailwindcss";
 
+/* ----------------------------------------------------------------------------
+   AgriSurv design tokens
+   Palette derived from the brand logo:
+   - Deep forest green  (primary, headings)
+   - Bright leaf green   (accent, CTAs)
+   - Soil brown          (subtle warm accent)
+---------------------------------------------------------------------------- */
+@theme {
+  /* Deep forest green */
+  --color-forest-50: #ecf5ef;
+  --color-forest-100: #d2e7da;
+  --color-forest-200: #a6cfb6;
+  --color-forest-300: #74b18d;
+  --color-forest-400: #438f63;
+  --color-forest-500: #2e7d50;
+  --color-forest-600: #1f5c3d;
+  --color-forest-700: #1a4d33;
+  --color-forest-800: #163f2b;
+  --color-forest-900: #102e20;
+
+  /* Bright leaf green */
+  --color-leaf-50: #f1f9e9;
+  --color-leaf-100: #e0f1cb;
+  --color-leaf-200: #c4e49d;
+  --color-leaf-300: #a5d471;
+  --color-leaf-400: #8bc651;
+  --color-leaf-500: #7ab648;
+  --color-leaf-600: #5f9e35;
+  --color-leaf-700: #4a7c2a;
+  --color-leaf-800: #3c6224;
+  --color-leaf-900: #335220;
+
+  /* Soil brown */
+  --color-soil-300: #c89b6f;
+  --color-soil-500: #8b5e34;
+  --color-soil-700: #6b4827;
+
+  /* Neutral surface */
+  --color-cream: #f7f9f4;
+
+  --font-display: var(--font-sora);
+  --font-sans: var(--font-inter);
+
+  --shadow-soft: 0 1px 2px rgba(16, 46, 32, 0.04), 0 8px 24px rgba(16, 46, 32, 0.06);
+  --shadow-card: 0 1px 3px rgba(16, 46, 32, 0.06), 0 12px 32px rgba(16, 46, 32, 0.08);
+}
+
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0f1f17;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Offset anchored sections so the sticky header doesn't cover headings */
+section[id] {
+  scroll-margin-top: 5.5rem;
+}
+
+::selection {
+  background: var(--color-leaf-200);
+  color: var(--color-forest-800);
+}
+
+/* ----------------------------------------------------------------------------
+   Reusable component classes
+---------------------------------------------------------------------------- */
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-leaf-200 bg-leaf-50 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-forest-700;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60 bg-leaf-500 text-white shadow-soft hover:bg-leaf-600 hover:shadow-card active:scale-[0.98];
+  }
+
+  .btn-dark {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60 bg-forest-700 text-white hover:bg-forest-800 active:scale-[0.98];
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60 border border-forest-200 bg-white text-forest-700 hover:border-forest-300 hover:bg-forest-50 active:scale-[0.98];
+  }
+
+  .card {
+    @apply rounded-2xl border border-forest-100 bg-white p-6 shadow-soft;
+  }
+}
+
+/* ----------------------------------------------------------------------------
+   Scroll-reveal (progressive enhancement; safe with reduced motion)
+---------------------------------------------------------------------------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
