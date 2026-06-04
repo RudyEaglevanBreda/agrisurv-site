@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "agrisurv-site",
+  "compatibility_date": "2024-11-01",
+  // Deploy the static export (produced by `npm run build`) as a static site.
+  // No Worker script (`main`) is needed — this is assets-only.
+  "assets": {
+    "directory": "./out",
+    "not_found_handling": "404-page"
+  }
+}
