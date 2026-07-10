@@ -49,10 +49,10 @@ const en = {
       { value: "48–72 hrs", label: "Report turnaround" },
       { value: "Licensed", label: "RPAS-compliant flights" },
     ],
-    cardTitle: "Pivot 7 · Maize",
-    cardMeta: "NDVI · 38.4 ha scanned",
-    annTitle: "Stress detected · SW corner",
-    annBody: "Likely water stress — flagged for scouting",
+    cardTitle: "Centre pivot · 62 ha",
+    cardMeta: "NDVI crop health · multispectral drone survey",
+    annTitle: "Stress detected",
+    annBody: "Low vigour — flagged for scouting",
   },
 
   services: {
@@ -477,10 +477,10 @@ const af: Dict = {
       { value: "48–72 uur", label: "Verslag-omkeertyd" },
       { value: "Gelisensieer", label: "RPAS-voldoende vlugte" },
     ],
-    cardTitle: "Spilpunt 7 · Mielies",
-    cardMeta: "NDVI · 38.4 ha geskandeer",
-    annTitle: "Stremming bespeur · SW-hoek",
-    annBody: "Waarskynlik waterstremming — gemerk vir verkenning",
+    cardTitle: "Spilpunt · 62 ha",
+    cardMeta: "NDVI-gewasgesondheid · multispektraal-droneopname",
+    annTitle: "Stremming bespeur",
+    annBody: "Lae groeikrag — gemerk vir verkenning",
   },
 
   services: {

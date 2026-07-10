@@ -1,7 +1,7 @@
 "use client";
 
 import { ArrowRight, Sparkles, Plane, Clock, ShieldCheck } from "lucide-react";
-import NdviField, { NdviLegend } from "./NdviField";
+import { NdviLegend } from "./NdviField";
 import { useLang } from "./LanguageProvider";
 
 const TRUST_ICONS = [Plane, Clock, ShieldCheck];
@@ -70,11 +70,24 @@ export default function Hero() {
           </dl>
         </div>
 
-        {/* Visual */}
+        {/* Visual — real NDVI layer from a drone survey */}
         <div className="relative">
           <div className="rounded-[28px] border border-forest-100 bg-white p-3 shadow-card">
-            <div className="overflow-hidden rounded-3xl">
-              <NdviField className="block w-full" ariaLabel={t.common.mapAria} />
+            <div className="relative overflow-hidden rounded-3xl">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/process/hero-ndvi.webp"
+                alt={t.common.mapAria}
+                fetchPriority="high"
+                className="block w-full"
+              />
+              {/* Ring marker over the main stressed patch */}
+              <span
+                className="pointer-events-none absolute left-[46%] top-[26%] block h-11 w-11 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-white bg-[#d6533a]/15 shadow-[0_0_0_2px_rgba(214,83,58,0.35)]"
+                aria-hidden="true"
+              >
+                <span className="absolute left-1/2 top-1/2 h-1.5 w-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white" />
+              </span>
             </div>
 
             <div className="flex flex-wrap items-center justify-between gap-3 px-2 pb-1 pt-4">
@@ -88,8 +101,8 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Floating annotation — sits over the map, clear of the caption row */}
-          <div className="absolute -left-4 top-[38%] hidden max-w-[14.5rem] -translate-y-1/2 rounded-2xl border border-forest-100 bg-white px-4 py-3 shadow-card md:block">
+          {/* Floating annotation — points at the stressed patch */}
+          <div className="absolute -left-4 top-[16%] hidden max-w-[14.5rem] -translate-y-1/2 rounded-2xl border border-forest-100 bg-white px-4 py-3 shadow-card md:block">
             <p className="flex items-center gap-2 text-sm font-semibold text-forest-800">
               <span className="inline-block h-2.5 w-2.5 rounded-full bg-[#d6533a]" />
               {t.hero.annTitle}
