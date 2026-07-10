@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, MessageCircle } from "lucide-react";
+import { Mail, MessageCircle, Phone } from "lucide-react";
 import Logo from "./Logo";
 import { site, whatsappLink, mailtoLink } from "@/lib/site";
 import { useLang } from "./LanguageProvider";
@@ -26,6 +26,20 @@ export default function Footer() {
             <Logo height={64} />
             <p className="mt-4 text-sm leading-relaxed text-forest-600">
               {t.footer.description}
+            </p>
+            <p className="mt-4 text-sm text-forest-600">
+              {t.footer.divisionPre}
+              <a
+                href={site.parentUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-forest-700 underline decoration-forest-200 underline-offset-2 transition-colors hover:text-leaf-700"
+              >
+                {site.parentCompany}
+              </a>
+            </p>
+            <p className="mt-1 text-xs text-forest-500">
+              {t.footer.licence} · {site.sacaaLicence}
             </p>
           </div>
 
@@ -70,6 +84,15 @@ export default function Footer() {
                 >
                   <MessageCircle className="h-4 w-4" aria-hidden="true" />
                   {t.footer.whatsappUs}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`tel:+${site.whatsappNumber}`}
+                  className="flex items-center gap-2 text-sm text-forest-600 transition-colors hover:text-leaf-700"
+                >
+                  <Phone className="h-4 w-4" aria-hidden="true" />
+                  {site.phoneDisplay}
                 </a>
               </li>
               <li className="text-sm text-forest-600">{t.common.serviceArea}</li>

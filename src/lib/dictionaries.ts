@@ -18,7 +18,7 @@ const en = {
   common: {
     low: "Low",
     highNdvi: "High NDVI",
-    serviceArea: "South Africa",
+    serviceArea: "Worcester, Western Cape · flying nationwide",
     enlarge: "Enlarge image",
     close: "Close",
     mapAria:
@@ -49,7 +49,7 @@ const en = {
     trust: [
       { value: "Multispectral", label: "Calibrated sensors" },
       { value: "48–72 hrs", label: "Report turnaround" },
-      { value: "Licensed", label: "RPAS-compliant flights" },
+      { value: "SACAA licensed", label: "Certified drone operator" },
     ],
     cardTitle: "Centre pivot · 62 ha",
     cardMeta: "NDVI crop health · multispectral drone survey",
@@ -239,6 +239,7 @@ const en = {
       "AgriSurv was founded on a simple idea: the technology that lets you see crop stress from above shouldn't be locked away in research labs and big-corporate budgets. It belongs in the hands of the people growing the food.",
       "We pair state-of-the-art multispectral drones with proper agronomic interpretation, so every flight ends with insight you can act on — not a folder of images you have to decode yourself.",
       "From a single problem field to a whole-farm programme across the season, we're here to help you protect yield, cut waste and farm with confidence.",
+      "AgriSurv is the precision-agriculture division of Techno Survey Solutions, a SACAA-licensed drone operator (UASOC.0001.2004/G1240D) whose team has flown surveys for some of South Africa's biggest names in mining, energy and construction — including Anglo American, Eskom and Assmang. We bring that same survey-grade discipline to your farm.",
     ],
     values: [
       {
@@ -271,7 +272,7 @@ const en = {
       },
       {
         q: "What area can you cover?",
-        a: "We're based in and fly across South Africa. A single drone can map hundreds of hectares in a day, so from a few pivots to a whole farm, we can scale the flight plan to your operation.",
+        a: "We're based in Worcester in the Western Cape and fly across South Africa. A single drone can map hundreds of hectares in a day, so from a few pivots to a whole farm, we can scale the flight plan to your operation.",
       },
       {
         q: "Which crops do you work with?",
@@ -346,6 +347,8 @@ const en = {
     whatsappUs: "WhatsApp us",
     quote: "Get a quote",
     rights: "All rights reserved.",
+    divisionPre: "A division of ",
+    licence: "SACAA-licensed drone operator",
   },
 
   howItWorks: {
@@ -448,7 +451,7 @@ const af: Dict = {
   common: {
     low: "Laag",
     highNdvi: "Hoë NDVI",
-    serviceArea: "Suid-Afrika",
+    serviceArea: "Worcester, Wes-Kaap · vlieg landwyd",
     enlarge: "Vergroot beeld",
     close: "Maak toe",
     mapAria:
@@ -479,7 +482,7 @@ const af: Dict = {
     trust: [
       { value: "Multispektraal", label: "Gekalibreerde sensors" },
       { value: "48–72 uur", label: "Verslag-omkeertyd" },
-      { value: "Gelisensieer", label: "RPAS-voldoende vlugte" },
+      { value: "SACAA-gelisensieer", label: "Gesertifiseerde drone-operateur" },
     ],
     cardTitle: "Spilpunt · 62 ha",
     cardMeta: "NDVI-gewasgesondheid · multispektraal-droneopname",
@@ -669,6 +672,7 @@ const af: Dict = {
       "AgriSurv is op 'n eenvoudige idee gebou: die tegnologie wat jou gewasstremming van bo af laat sien, behoort nie in navorsingslaboratoriums en groot korporatiewe begrotings weggesluit te wees nie. Dit hoort in die hande van die mense wat die kos verbou.",
       "Ons kombineer moderne multispektraal-drones met behoorlike agronomiese interpretasie, sodat elke vlug eindig met insig waarop jy kan reageer — nie 'n vouer vol beelde wat jy self moet ontsyfer nie.",
       "Van 'n enkele probleemland tot 'n heelplaas-program oor die seisoen, ons is hier om jou te help om opbrengs te beskerm, vermorsing te sny en met vertroue te boer.",
+      "AgriSurv is die presisieboerdery-afdeling van Techno Survey Solutions, 'n SACAA-gelisensieerde drone-operateur (UASOC.0001.2004/G1240D) wie se span opnames gevlieg het vir van Suid-Afrika se grootste name in mynbou, energie en konstruksie — insluitend Anglo American, Eskom en Assmang. Ons bring daardie selfde opname-gehalte dissipline na jou plaas.",
     ],
     values: [
       {
@@ -701,7 +705,7 @@ const af: Dict = {
       },
       {
         q: "Watter area kan julle dek?",
-        a: "Ons is in Suid-Afrika gebaseer en vlieg dwarsoor die land. 'n Enkele drone kan honderde hektaar in 'n dag karteer, so van 'n paar spilpunte tot 'n hele plaas — ons skaal die vlugplan by jou bedryf aan.",
+        a: "Ons is in Worcester in die Wes-Kaap gebaseer en vlieg dwarsoor Suid-Afrika. 'n Enkele drone kan honderde hektaar in 'n dag karteer, so van 'n paar spilpunte tot 'n hele plaas — ons skaal die vlugplan by jou bedryf aan.",
       },
       {
         q: "Met watter gewasse werk julle?",
@@ -776,6 +780,8 @@ const af: Dict = {
     whatsappUs: "WhatsApp ons",
     quote: "Kry 'n kwotasie",
     rights: "Alle regte voorbehou.",
+    divisionPre: "'n Afdeling van ",
+    licence: "SACAA-gelisensieerde drone-operateur",
   },
 
   howItWorks: {

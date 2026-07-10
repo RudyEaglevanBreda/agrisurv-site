@@ -23,9 +23,10 @@ and replace them:
 
 | Placeholder | Where | What to put |
 |---|---|---|
-| `{{WHATSAPP_NUMBER}}` | `src/lib/site.ts` | WhatsApp number, **international format, digits only** (e.g. `27821234567`) |
-| `{{PHONE_DISPLAY}}` | `src/lib/site.ts` | Human-readable phone (e.g. `+27 82 123 4567`). *Until set, the phone contact card is automatically hidden.* |
 | `{{FORMSPREE_ID}}` | `src/lib/site.ts` | A free form ID from [formspree.io](https://formspree.io). *Until set, the contact form falls back to opening the visitor's email app pre-filled.* |
+
+Phone & WhatsApp are set to the Techno Survey Solutions number (069 808 6428);
+swap in a dedicated AgriSurv number in `src/lib/site.ts` if you get one.
 
 Other content to review:
 

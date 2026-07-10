@@ -15,14 +15,19 @@ export const site = {
   url: "https://agrisurv.co.za",
 
   email: "info@technosurveys.co.za",
+  phoneDisplay: "069 808 6428",
+  whatsappNumber: "27698086428",
 
-  // --- Replace these placeholders ---------------------------------------
-  phoneDisplay: "{{PHONE_DISPLAY}}",
-  whatsappNumber: "{{WHATSAPP_NUMBER}}",
+  // --- Replace this placeholder ------------------------------------------
   formspreeId: "{{FORMSPREE_ID}}",
-  // ----------------------------------------------------------------------
+  // ------------------------------------------------------------------------
 
   serviceArea: "South Africa",
+
+  // Parent company / credentials
+  parentCompany: "Techno Survey Solutions",
+  parentUrl: "https://technosurveys.co.za",
+  sacaaLicence: "SACAA.UASOC.0001.2004/G1240D",
   whatsappMessage:
     "Hi AgriSurv, I'd like a quote for drone NDVI crop analysis on my farm.",
 } as const;
