@@ -19,8 +19,10 @@ const en = {
     low: "Low",
     highNdvi: "High NDVI",
     serviceArea: "South Africa",
+    enlarge: "Enlarge image",
+    close: "Close",
     mapAria:
-      "Sample NDVI crop-health map showing healthy canopy in green and stressed zones highlighted in orange and red",
+      "NDVI crop-health map from a drone survey — healthy canopy in green, stressed zones in orange and red",
   },
 
   nav: {
@@ -115,8 +117,8 @@ const en = {
     eyebrow: "The deliverable",
     heading: "Imagery is nice. Decisions are better.",
     sub: "We don't just hand over pretty pictures. Every survey becomes a practical set of insights your team can act on the same week.",
-    cardTitle: "Sample NDVI deliverable",
-    cardMeta: "Wheat · 64 ha · flown at flag-leaf stage",
+    cardTitle: "The dashboard in action",
+    cardMeta: "One field, every layer — satellite, crop health, terrain & water",
     insights: [
       {
         title: "Pinpointed hotspots",
@@ -447,8 +449,10 @@ const af: Dict = {
     low: "Laag",
     highNdvi: "Hoë NDVI",
     serviceArea: "Suid-Afrika",
+    enlarge: "Vergroot beeld",
+    close: "Maak toe",
     mapAria:
-      "Voorbeeld NDVI-gewasgesondheidskaart wat gesonde plantegroei in groen wys en gestremde sones in oranje en rooi uitlig",
+      "NDVI-gewasgesondheidskaart uit 'n drone-opname — gesonde plantegroei in groen, gestremde sones in oranje en rooi",
   },
 
   nav: {
@@ -543,8 +547,8 @@ const af: Dict = {
     eyebrow: "Die aflewerbare",
     heading: "Beelde is mooi. Besluite is beter.",
     sub: "Ons oorhandig nie net mooi prente nie. Elke opname word 'n praktiese stel insigte waarop jou span dieselfde week kan reageer.",
-    cardTitle: "Voorbeeld NDVI-aflewerbare",
-    cardMeta: "Koring · 64 ha · gevlieg op vlagblaarstadium",
+    cardTitle: "Die dashboard in aksie",
+    cardMeta: "Een land, elke laag — satelliet, gewasgesondheid, terrein & water",
     insights: [
       {
         title: "Presiese brandpunte",

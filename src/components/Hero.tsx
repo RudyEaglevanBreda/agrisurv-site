@@ -2,6 +2,7 @@
 
 import { ArrowRight, Sparkles, Plane, Clock, ShieldCheck } from "lucide-react";
 import { NdviLegend } from "./NdviField";
+import Zoomable from "./Zoomable";
 import { useLang } from "./LanguageProvider";
 
 const TRUST_ICONS = [Plane, Clock, ShieldCheck];
@@ -73,22 +74,24 @@ export default function Hero() {
         {/* Visual — real NDVI layer from a drone survey */}
         <div className="relative">
           <div className="rounded-[28px] border border-forest-100 bg-white p-3 shadow-card">
-            <div className="relative overflow-hidden rounded-3xl">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/process/hero-ndvi.webp"
-                alt={t.common.mapAria}
-                fetchPriority="high"
-                className="block w-full"
-              />
-              {/* Ring marker over the main stressed patch */}
-              <span
-                className="pointer-events-none absolute left-[46%] top-[26%] block h-11 w-11 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-white bg-[#d6533a]/15 shadow-[0_0_0_2px_rgba(214,83,58,0.35)]"
-                aria-hidden="true"
-              >
-                <span className="absolute left-1/2 top-1/2 h-1.5 w-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white" />
-              </span>
-            </div>
+            <Zoomable src="/process/hero-ndvi.webp" alt={t.common.mapAria}>
+              <div className="relative overflow-hidden rounded-3xl">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/process/hero-ndvi.webp"
+                  alt={t.common.mapAria}
+                  fetchPriority="high"
+                  className="block w-full"
+                />
+                {/* Ring marker over the main stressed patch */}
+                <span
+                  className="pointer-events-none absolute left-[46%] top-[26%] block h-11 w-11 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-white bg-[#d6533a]/15 shadow-[0_0_0_2px_rgba(214,83,58,0.35)]"
+                  aria-hidden="true"
+                >
+                  <span className="absolute left-1/2 top-1/2 h-1.5 w-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white" />
+                </span>
+              </div>
+            </Zoomable>
 
             <div className="flex flex-wrap items-center justify-between gap-3 px-2 pb-1 pt-4">
               <div>

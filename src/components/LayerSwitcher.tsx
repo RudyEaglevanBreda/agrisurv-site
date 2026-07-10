@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Zoomable from "./Zoomable";
 import { useLang } from "./LanguageProvider";
 
 const LAYERS = [
@@ -27,23 +28,25 @@ export default function LayerSwitcher() {
 
   return (
     <div>
-      <div className="relative aspect-square overflow-hidden rounded-2xl border border-forest-100 bg-forest-900 shadow-soft">
-        {LAYERS.map((l, i) => (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
-            key={l.key}
-            src={l.src}
-            alt={labelFor(l.key)}
-            loading="lazy"
-            className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-500 ${
-              i === active ? "opacity-100" : "opacity-0"
-            }`}
-          />
-        ))}
-        <div className="absolute left-3 top-3 rounded-full bg-black/55 px-3 py-1 text-xs font-semibold text-white backdrop-blur-sm">
-          {labelFor(LAYERS[active].key)}
+      <Zoomable src={LAYERS[active].src} alt={labelFor(LAYERS[active].key)}>
+        <div className="relative aspect-square overflow-hidden rounded-2xl border border-forest-100 bg-forest-900 shadow-soft">
+          {LAYERS.map((l, i) => (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              key={l.key}
+              src={l.src}
+              alt={labelFor(l.key)}
+              loading="lazy"
+              className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-500 ${
+                i === active ? "opacity-100" : "opacity-0"
+              }`}
+            />
+          ))}
+          <div className="absolute left-3 top-3 rounded-full bg-black/55 px-3 py-1 text-xs font-semibold text-white backdrop-blur-sm">
+            {labelFor(LAYERS[active].key)}
+          </div>
         </div>
-      </div>
+      </Zoomable>
 
       <div
         className="mt-3 inline-flex flex-wrap gap-1 rounded-full border border-forest-200 bg-white p-1"

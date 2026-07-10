@@ -1,7 +1,7 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import { Crosshair, TrendingUp, FileDown, MapPinned } from "lucide-react";
-import NdviField, { NdviLegend } from "./NdviField";
 import Reveal from "./Reveal";
 import { useLang } from "./LanguageProvider";
 
@@ -9,6 +9,14 @@ const ICONS = [Crosshair, TrendingUp, MapPinned, FileDown];
 
 export default function SampleReport() {
   const { t } = useLang();
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  // Respect reduced-motion: pause the ambient loop for those users.
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      videoRef.current?.pause();
+    }
+  }, []);
 
   return (
     <section id="sample" className="bg-cream py-20 sm:py-28">
@@ -16,12 +24,18 @@ export default function SampleReport() {
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <Reveal>
             <div className="rounded-[28px] border border-forest-100 bg-white p-3 shadow-card">
-              <div className="overflow-hidden rounded-3xl">
-                <NdviField
+              <div className="overflow-hidden rounded-3xl bg-forest-900">
+                <video
+                  ref={videoRef}
+                  src="/process/layers-demo.mp4"
+                  poster="/process/layers-poster.webp"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  aria-label={t.sample.cardTitle}
                   className="block w-full"
-                  cols={26}
-                  rows={18}
-                  ariaLabel={t.common.mapAria}
                 />
               </div>
               <div className="flex flex-wrap items-center justify-between gap-3 px-2 pb-1 pt-4">
@@ -31,7 +45,6 @@ export default function SampleReport() {
                   </p>
                   <p className="text-xs text-forest-600">{t.sample.cardMeta}</p>
                 </div>
-                <NdviLegend lowLabel={t.common.low} highLabel={t.common.highNdvi} />
               </div>
             </div>
           </Reveal>

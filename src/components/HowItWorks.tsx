@@ -3,6 +3,7 @@
 import { ArrowRight } from "lucide-react";
 import Reveal from "./Reveal";
 import LayerSwitcher from "./LayerSwitcher";
+import Zoomable from "./Zoomable";
 import { useLang } from "./LanguageProvider";
 
 /**
@@ -51,30 +52,32 @@ function Shot({
   cover?: boolean;
 }) {
   return (
-    <figure className="relative overflow-hidden rounded-2xl border border-forest-100 bg-forest-50 shadow-soft">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={src}
-        alt={caption}
-        loading="lazy"
-        className={cover ? "aspect-[4/3] w-full object-cover" : "block w-full"}
-      />
-      {callouts
-        .filter((c) => c.label)
-        .map((c, i) => (
-          <span
-            key={i}
-            className="pointer-events-none absolute z-10 hidden -translate-x-1/2 -translate-y-1/2 items-center gap-1.5 rounded-full bg-white/95 px-2.5 py-1 text-[11px] font-semibold text-forest-800 shadow-card ring-1 ring-forest-100 sm:inline-flex"
-            style={{ left: `${c.x}%`, top: `${c.y}%` }}
-          >
-            <span className="h-1.5 w-1.5 rounded-full bg-leaf-500" />
-            {c.label}
-          </span>
-        ))}
-      <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent p-3 pt-9">
-        <p className="text-xs font-medium text-white sm:text-[13px]">{caption}</p>
-      </figcaption>
-    </figure>
+    <Zoomable src={src} alt={caption}>
+      <figure className="relative overflow-hidden rounded-2xl border border-forest-100 bg-forest-50 shadow-soft transition-shadow duration-200 hover:shadow-card">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={src}
+          alt={caption}
+          loading="lazy"
+          className={cover ? "aspect-[4/3] w-full object-cover" : "block w-full"}
+        />
+        {callouts
+          .filter((c) => c.label)
+          .map((c, i) => (
+            <span
+              key={i}
+              className="pointer-events-none absolute z-10 hidden -translate-x-1/2 -translate-y-1/2 items-center gap-1.5 rounded-full bg-white/95 px-2.5 py-1 text-[11px] font-semibold text-forest-800 shadow-card ring-1 ring-forest-100 sm:inline-flex"
+              style={{ left: `${c.x}%`, top: `${c.y}%` }}
+            >
+              <span className="h-1.5 w-1.5 rounded-full bg-leaf-500" />
+              {c.label}
+            </span>
+          ))}
+        <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent p-3 pt-9">
+          <p className="text-xs font-medium text-white sm:text-[13px]">{caption}</p>
+        </figcaption>
+      </figure>
+    </Zoomable>
   );
 }
 
