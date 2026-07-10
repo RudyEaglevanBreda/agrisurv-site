@@ -345,6 +345,90 @@ const en = {
     quote: "Get a quote",
     rights: "All rights reserved.",
   },
+
+  howItWorks: {
+    eyebrow: "How it works",
+    heading: "From take-off to decision — the whole process",
+    sub: "Here's exactly what happens between a drone landing in your field and a decision you can act on.",
+    layers: {
+      satellite: "Satellite",
+      health: "Crop health",
+      terrain: "Terrain & water",
+    },
+    steps: [
+      {
+        num: "01",
+        title: "We fly your fields",
+        intro:
+          "Every survey starts with a drone flight on RTK precision positioning — the same GPS-correction technology land surveyors use. Our survey drone maps your fields at centimetre accuracy, while our multispectral drone captures what the eye can't: the light signature of crop stress, before it shows on the ground.",
+        bullets: [
+          "RTK base and rover for survey-grade, centimetre-level positioning",
+          "RGB and multispectral capture in a single visit",
+          "A typical field takes minutes to fly, with zero disruption to your operations",
+        ],
+        media: [
+          { caption: "Survey drone, ready for take-off", callouts: ["RGB + multispectral"] },
+          { caption: "RTK base station set up on site", callouts: [] },
+          { caption: "Ground control, measured with the RTK rover", callouts: [] },
+        ],
+      },
+      {
+        num: "02",
+        title: "We turn thousands of photos into maps",
+        intro:
+          "Back at the office, professional photogrammetry software stitches the flight into three foundation products.",
+        bullets: [
+          "A true-to-scale aerial map (orthomosaic), sharp enough to see individual plants, wheel tracks and problem patches",
+          "Crop-health (NDVI) maps that colour-grade your field from thriving to struggling",
+          "A precision terrain model of the bare earth beneath the crop, accurate to a few centimetres",
+        ],
+        media: [
+          { caption: "Orthomosaic — sharp enough to see plants, tracks and problem patches", callouts: ["Erosion channel"] },
+          { caption: "NDVI crop health — red patches flag stressed crop", callouts: [] },
+          { caption: "Centimetre-accurate 3D terrain model", callouts: [] },
+        ],
+      },
+      {
+        num: "03",
+        title: "We analyse — so you get answers, not just pictures",
+        intro:
+          "This is where we go beyond pretty maps. We run your terrain and crop data through agronomic analysis.",
+        bullets: [
+          "Water flow & drainage — we model where rain runs, where it channels, and where it ponds, down to the depth and volume of every hollow",
+          "Contours, slope & elevation — for drainage works, erosion control and machinery routes",
+          "Management zones & variable-rate maps — turning crop variation into prescriptions your spreader or sprayer can act on",
+        ],
+        media: [
+          { caption: "Contours, water-flow lines and ponding areas", callouts: ["Water flow", "Contours"] },
+          { caption: "Zoning the field in the prescription tool", callouts: [] },
+          { caption: "Variable-rate map, export-ready for tractor or drone", callouts: [] },
+        ],
+      },
+      {
+        num: "04",
+        title: "Your farm, live in your dashboard",
+        intro:
+          "No PDFs gathering dust. You get a login to an interactive map of your farm, where every layer is one tap away.",
+        bullets: [
+          "Zoom from farm level down to individual plants on the high-resolution imagery",
+          "Flip between crop-health, terrain, drainage and prescription layers",
+          "View your field in true 3D — spin and tilt the actual surface of your land",
+          "Drop pins and notes on obstacles, pipelines and problem spots",
+          "Daily spray windows (wind, rain, Delta-T), a 7-day outlook and growing degree days — for your field, not the nearest town",
+          "Ponding alerts before heavy rain: which mapped hollows are likely to hold water",
+        ],
+        media: [
+          { caption: "Spray windows, 7-day outlook and growing degree days", callouts: [] },
+        ],
+      },
+    ],
+    closing: {
+      title: "Decisions, not data",
+      body:
+        "You walk into the season knowing where water will stand, where the crop is struggling, where to vary your inputs, and when to spray. Fly again later in the season and you see exactly what changed.",
+      cta: "Get a quote",
+    },
+  },
 };
 
 export type Dict = typeof en;
@@ -688,6 +772,90 @@ const af: Dict = {
     whatsappUs: "WhatsApp ons",
     quote: "Kry 'n kwotasie",
     rights: "Alle regte voorbehou.",
+  },
+
+  howItWorks: {
+    eyebrow: "Hoe dit werk",
+    heading: "Van opstyg tot besluit — die hele proses",
+    sub: "Hier is presies wat gebeur tussen 'n drone wat in jou land land en 'n besluit waarop jy kan reageer.",
+    layers: {
+      satellite: "Satelliet",
+      health: "Gewasgesondheid",
+      terrain: "Terrein & water",
+    },
+    steps: [
+      {
+        num: "01",
+        title: "Ons vlieg jou lande",
+        intro:
+          "Elke opname begin met 'n dronevlug op RTK-presisieposisionering — dieselfde GPS-korreksietegnologie wat landmeters gebruik. Ons opname-drone karteer jou lande tot op sentimeter-akkuraatheid, terwyl ons multispektraal-drone vasvang wat die oog nie kan sien nie: die ligtekening van gewasstremming, voordat dit op die grond wys.",
+        bullets: [
+          "RTK-basis en -rover vir opname-gehalte, sentimeter-vlak posisionering",
+          "RGB- en multispektraal-opname in 'n enkele besoek",
+          "'n Tipiese land neem minute om te vlieg, met geen onderbreking van jou bedrywighede nie",
+        ],
+        media: [
+          { caption: "Opname-drone, gereed om op te styg", callouts: ["RGB + multispektraal"] },
+          { caption: "RTK-basisstasie op die perseel opgestel", callouts: [] },
+          { caption: "Grondbeheer, met die RTK-rover gemeet", callouts: [] },
+        ],
+      },
+      {
+        num: "02",
+        title: "Ons omskep duisende foto's in kaarte",
+        intro:
+          "Terug by die kantoor stik professionele fotogrammetrie-sagteware die vlug saam tot drie grondslagprodukte.",
+        bullets: [
+          "'n Ware-skaal lugkaart (ortomosaïek), skerp genoeg om individuele plante, wielspore en probleemkolle te sien",
+          "Gewasgesondheidskaarte (NDVI) wat jou land kleurgradeer van florerend tot sukkelend",
+          "'n Presiese terreinmodel van die kaal grond onder die gewas, akkuraat tot 'n paar sentimeter",
+        ],
+        media: [
+          { caption: "Ortomosaïek — skerp genoeg vir plante, spore en probleemkolle", callouts: ["Erosiesloot"] },
+          { caption: "NDVI-gewasgesondheid — rooi kolle merk gestremde gewas", callouts: [] },
+          { caption: "Sentimeter-akkurate 3D-terreinmodel", callouts: [] },
+        ],
+      },
+      {
+        num: "03",
+        title: "Ons ontleed — sodat jy antwoorde kry, nie net prente nie",
+        intro:
+          "Dít is waar ons verder gaan as mooi kaarte. Ons stuur jou terrein- en gewasdata deur agronomiese ontleding.",
+        bullets: [
+          "Watervloei en dreinering — ons modelleer waar reën loop, waar dit in kanale saamtrek en waar dit poel, tot op die diepte en volume van elke holte",
+          "Kontoere, helling en hoogte — vir dreineringswerke, erosiebeheer en masjienroetes",
+          "Bestuurssones en veranderlike-tempo kaarte — wat gewasvariasie omskep in voorskrifte waarop jou strooier of spuit kan reageer",
+        ],
+        media: [
+          { caption: "Kontoere, watervloeilyne en poelareas", callouts: ["Watervloei", "Kontoere"] },
+          { caption: "Die land word in die voorskrif-instrument in sones verdeel", callouts: [] },
+          { caption: "Veranderlike-tempo kaart, uitvoergereed vir trekker of drone", callouts: [] },
+        ],
+      },
+      {
+        num: "04",
+        title: "Jou plaas, lewendig in jou dashboard",
+        intro:
+          "Geen PDF's wat stof vergaar nie. Jy kry 'n aanmelding by 'n interaktiewe kaart van jou plaas, waar elke laag een tik ver is.",
+        bullets: [
+          "Zoem van plaasvlak af tot by individuele plante op die hoëresolusie-beelde",
+          "Wissel tussen gewasgesondheid-, terrein-, dreinering- en voorskriflae",
+          "Bekyk jou land in ware 3D — draai en kantel die werklike oppervlak van jou grond",
+          "Los penne en notas op hindernisse, pyplyne en probleemkolle",
+          "Daaglikse spuitvensters (wind, reën, Delta-T), 'n 7-dag-vooruitskatting en groeigraaddae — vir jou land, nie die naaste dorp nie",
+          "Poel-waarskuwings voor swaar reën: watter gekarteerde holtes waarskynlik water sal hou",
+        ],
+        media: [
+          { caption: "Spuitvensters, 7-dag-vooruitskatting en groeigraaddae", callouts: [] },
+        ],
+      },
+    ],
+    closing: {
+      title: "Besluite, nie data nie",
+      body:
+        "Jy stap die seisoen in met die wete waar water gaan staan, waar die gewas sukkel, waar om jou insette te wissel, en wanneer om te spuit. Vlieg later in die seisoen weer en jy sien presies wat verander het.",
+      cta: "Kry 'n kwotasie",
+    },
   },
 };
 

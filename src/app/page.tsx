@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
-import Process from "@/components/Process";
+import HowItWorks from "@/components/HowItWorks";
 import SampleReport from "@/components/SampleReport";
 import Equipment from "@/components/Equipment";
 import Pricing from "@/components/Pricing";
@@ -41,7 +41,7 @@ export default function Home() {
       <main id="main">
         <Hero />
         <Services />
-        <Process />
+        <HowItWorks />
         <SampleReport />
         <Equipment />
         <Pricing />
