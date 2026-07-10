@@ -134,7 +134,9 @@ export function NdviLegend({
   lowLabel?: string;
   highLabel?: string;
 }) {
-  const stops = ["#d6533a", "#e89a3a", "#e7d24a", "#bcd24c", "#86c14a", "#39963f", "#1a7a3f"];
+  // Sampled from the real NDVI render used in the hero (hue-bucketed pixel
+  // averages, low → high NDVI), so the scale matches the map exactly.
+  const stops = ["#b87464", "#b3885c", "#a89e3d", "#cfed23", "#adfa1c", "#7af71d", "#55cb39"];
   return (
     <div className={`flex items-center gap-3 ${className}`}>
       <span className="text-xs font-medium text-forest-600">{lowLabel}</span>
