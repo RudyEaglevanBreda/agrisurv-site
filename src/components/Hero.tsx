@@ -4,6 +4,7 @@ import { ArrowRight, Sparkles, Plane, Clock, ShieldCheck } from "lucide-react";
 import { NdviLegend } from "./NdviField";
 import Zoomable from "./Zoomable";
 import { useLang } from "./LanguageProvider";
+import { PORTAL_REGISTER_URL } from "../lib/portal";
 
 const TRUST_ICONS = [Plane, Clock, ShieldCheck];
 
@@ -36,10 +37,13 @@ export default function Hero() {
             {t.hero.sub}
           </p>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a href="#contact" className="btn-primary">
-              {t.cta.quote}
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <a href={PORTAL_REGISTER_URL} className="btn-primary">
+              {t.cta.portal}
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </a>
+            <a href="#contact" className="btn-ghost">
+              {t.cta.quote}
             </a>
             <a href="#process" className="btn-ghost">
               {t.cta.seeHow}

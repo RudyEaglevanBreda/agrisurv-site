@@ -36,6 +36,8 @@ const en = {
 
   cta: {
     quote: "Get a quote",
+    portal: "Register your farm — free",
+    portalLogin: "Farmer sign-in",
     seeHow: "See how it works",
     home: "AgriSurv home",
     openMenu: "Open menu",
@@ -469,6 +471,8 @@ const af: Dict = {
 
   cta: {
     quote: "Kry 'n kwotasie",
+    portal: "Registreer jou plaas — gratis",
+    portalLogin: "Boer-aanmelding",
     seeHow: "Sien hoe dit werk",
     home: "AgriSurv tuis",
     openMenu: "Maak kieslys oop",

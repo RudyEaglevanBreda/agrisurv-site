@@ -5,6 +5,7 @@ import { Menu, X, ArrowRight } from "lucide-react";
 import Logo from "./Logo";
 import LanguageToggle from "./LanguageToggle";
 import { useLang } from "./LanguageProvider";
+import { PORTAL_REGISTER_URL } from "../lib/portal";
 
 export default function Header() {
   const { t } = useLang();
@@ -64,8 +65,11 @@ export default function Header() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <LanguageToggle />
-          <a href="#contact" className="btn-primary">
+          <a href="#contact" className="btn-ghost">
             {t.cta.quote}
+          </a>
+          <a href={PORTAL_REGISTER_URL} className="btn-primary">
+            {t.cta.portal}
             <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </a>
         </div>
@@ -104,12 +108,19 @@ export default function Header() {
               </a>
             ))}
             <a
-              href="#contact"
+              href={PORTAL_REGISTER_URL}
               onClick={() => setOpen(false)}
               className="btn-primary mt-3 w-full"
             >
-              {t.cta.quote}
+              {t.cta.portal}
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </a>
+            <a
+              href="#contact"
+              onClick={() => setOpen(false)}
+              className="btn-ghost mt-2 w-full"
+            >
+              {t.cta.quote}
             </a>
           </nav>
         </div>
