@@ -465,6 +465,27 @@ const en = {
     },
     note: "Prescription maps export as shapefiles for your sprayer or spreader terminal, and job sheets share straight to your foreman's WhatsApp.",
     cta: "Register your farm — free",
+    share: {
+      heading: "From the app to the machine in three steps",
+      sub: "No software to learn, no cables, no GIS degree. If you can send a WhatsApp, you can get a prescription into a sprayer.",
+      steps: [
+        {
+          title: "Send it from your phone",
+          body: "The moment you save a prescription, two buttons appear: the job sheet (a one-page instruction PDF with the map, rates and tank mix) and the sprayer file. Both share straight to WhatsApp — send them to whoever sprays.",
+        },
+        {
+          title: "Onto a USB stick",
+          body: "The operator saves the sprayer file onto a USB stick and plugs it into the terminal in the cab — or loads it through the brand's own app. It's the standard prescription format these machines already understand.",
+        },
+        {
+          title: "Import and spray",
+          body: "On the terminal: Import → Prescription (Rx) → choose the field. The machine then varies the rate on its own as it drives — more where you said more, nothing in the no-go areas. The job sheet tells the operator exactly what to load.",
+        },
+      ],
+      systemsHeading: "Works with the terminals farmers actually run",
+      systemsNote:
+        "We export the industry-standard shapefile — the prescription format the major terminals and spray drones import. Run something else? If your controller takes prescription maps, it almost certainly reads our file — send us the model and we'll confirm before you commit to anything.",
+    },
   },
 };
 
@@ -930,6 +951,27 @@ const af: Dict = {
     },
     note: "Voorskrifkaarte voer uit as shapefiles vir jou spuit- of strooierterminaal, en werkkaarte deel direk na jou voorman se WhatsApp.",
     cta: "Registreer jou plaas — gratis",
+    share: {
+      heading: "Van die app tot by die masjien in drie stappe",
+      sub: "Geen sagteware om aan te leer nie, geen kabels nie, geen GIS-graad nie. As jy 'n WhatsApp kan stuur, kan jy 'n voorskrif in 'n spuit kry.",
+      steps: [
+        {
+          title: "Stuur dit van jou foon af",
+          body: "Die oomblik as jy 'n voorskrif stoor, verskyn twee knoppies: die werkkaart ('n een-bladsy instruksie-PDF met die kaart, dosisse en tenkmengsel) en die spuitlêer. Albei deel direk na WhatsApp — stuur dit vir wie ook al spuit.",
+        },
+        {
+          title: "Op 'n USB-stokkie",
+          body: "Die operateur stoor die spuitlêer op 'n USB-stokkie en druk dit in die terminaal in die kajuit — of laai dit deur die handelsmerk se eie app. Dit is die standaard voorskrifformaat wat dié masjiene reeds verstaan.",
+        },
+        {
+          title: "Voer in en spuit",
+          body: "Op die terminaal: Voer in → Voorskrif (Rx) → kies die land. Die masjien wissel dan self die dosis soos hy ry — meer waar jy meer gesê het, niks in die no-go-kolle nie. Die werkkaart sê vir die operateur presies wat om te laai.",
+        },
+      ],
+      systemsHeading: "Werk met die terminale wat boere werklik gebruik",
+      systemsNote:
+        "Ons voer die industrie-standaard shapefile uit — die voorskrifformaat wat die groot terminale en spuithommeltuie invoer. Gebruik jy iets anders? As jou beheerder voorskrifkaarte kan vat, lees hy heel waarskynlik ons lêer — stuur vir ons die model en ons bevestig voor jy jou aan enigiets verbind.",
+    },
   },
 };
 

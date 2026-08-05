@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, type ReactNode } from "react";
+import { createPortal } from "react-dom";
 import { X } from "lucide-react";
 import { useLang } from "./LanguageProvider";
 
@@ -47,7 +48,10 @@ export default function Zoomable({
         {children}
       </button>
 
-      {open && (
+      {/* Portal to <body>: ancestors with CSS transforms (the Reveal animation) turn
+          position:fixed into position:relative-to-them, trapping the overlay inside the
+          card — exactly the "image in a black border" bug. */}
+      {open && createPortal(
         <div
           role="dialog"
           aria-modal="true"
@@ -59,7 +63,9 @@ export default function Zoomable({
           <img
             src={src}
             alt={alt}
-            className="max-h-full max-w-full cursor-zoom-out rounded-xl object-contain shadow-2xl"
+            /* h/w-full + object-contain actually ENLARGES: with max-h/max-w alone, images
+               smaller than the viewport (the phone screenshots) stayed tiny in the dark. */
+            className="h-full w-full cursor-zoom-out object-contain"
           />
           <button
             type="button"
@@ -69,7 +75,8 @@ export default function Zoomable({
           >
             <X className="h-6 w-6" aria-hidden="true" />
           </button>
-        </div>
+        </div>,
+        document.body,
       )}
     </>
   );
