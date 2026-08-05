@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import HowItWorks from "@/components/HowItWorks";
+import AppTour from "@/components/AppTour";
 import SampleReport from "@/components/SampleReport";
 import Equipment from "@/components/Equipment";
 import Pricing from "@/components/Pricing";
@@ -42,6 +43,7 @@ export default function Home() {
         <Hero />
         <Services />
         <HowItWorks />
+        <AppTour />
         <SampleReport />
         <Equipment />
         <Pricing />

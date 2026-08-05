@@ -436,6 +436,36 @@ const en = {
       cta: "Get a quote",
     },
   },
+
+  appTour: {
+    eyebrow: "The app — real screens, real field",
+    heading: "From your pocket to the sprayer",
+    sub: "Every screenshot below is the actual Farm Vision app over our Swellendam demo field — nothing mocked up. This is what you and your foreman work with.",
+    phones: [
+      {
+        title: "Your farm, every morning",
+        body: "Open the app and it tells you what needs your eye today: crop-health drops, spray windows, ponding risk before rain — ranked by urgency.",
+      },
+      {
+        title: "Centimetre-level crop health",
+        body: "The drone NDVI over a 93 ha barley pivot. Weak rows are found automatically, and “Take me there” navigates you to the exact spot on foot or by bakkie.",
+      },
+      {
+        title: "Tap what you want to spray",
+        body: "The prescription wizard grids the field, you tap examples of what to treat and what to protect, and it finds every matching cell in seconds.",
+      },
+      {
+        title: "Zones, rates and the tank mix",
+        body: "Split the field by crop health, set a rate per zone, and the app works out the mix ratio, water and total product to load.",
+      },
+    ],
+    desktop: {
+      title: "The full toolbox on your desktop",
+      body: "The same field in the browser: drone and satellite layers, planting rows, contours and water flow, season records, AI analysis and one-click PDF reports. Everything the phone captures, the desk can study.",
+    },
+    note: "Prescription maps export as shapefiles for your sprayer or spreader terminal, and job sheets share straight to your foreman's WhatsApp.",
+    cta: "Register your farm — free",
+  },
 };
 
 export type Dict = typeof en;
@@ -870,6 +900,36 @@ const af: Dict = {
         "Jy stap die seisoen in met die wete waar water gaan staan, waar die gewas sukkel, waar om jou insette te wissel, en wanneer om te spuit. Vlieg later in die seisoen weer en jy sien presies wat verander het.",
       cta: "Kry 'n kwotasie",
     },
+  },
+
+  appTour: {
+    eyebrow: "Die app — regte skerms, regte land",
+    heading: "Van jou sak tot by die spuit",
+    sub: "Elke skermskoot hieronder is die werklike Farm Vision-app oor ons Swellendam-demoland — niks opgemaak nie. Dit is waarmee jy en jou voorman werk.",
+    phones: [
+      {
+        title: "Jou plaas, elke oggend",
+        body: "Maak die app oop en dit sê wat vandag jou aandag nodig het: dalings in gewasgesondheid, spuitvensters, watervorming voor reën — gerangskik volgens dringendheid.",
+      },
+      {
+        title: "Gewasgesondheid tot op sentimeter",
+        body: "Die hommeltuig-NDVI oor 'n 93 ha garsspilpunt. Swak rye word vanself gevind, en “Vat my soontoe” lei jou te voet of per bakkie tot op die presiese kol.",
+      },
+      {
+        title: "Tik wat jy wil spuit",
+        body: "Die voorskrif-assistent lê 'n ruitnet oor die land, jy tik voorbeelde van wat behandel en wat beskerm moet word, en dit vind elke passende sel binne sekondes.",
+      },
+      {
+        title: "Sones, dosisse en die tenkmengsel",
+        body: "Verdeel die land volgens gewasgesondheid, stel 'n dosis per sone, en die app bereken die mengverhouding, water en totale produk om te laai.",
+      },
+    ],
+    desktop: {
+      title: "Die volle gereedskapkis op jou lessenaar",
+      body: "Dieselfde land in die blaaier: hommeltuig- en satellietlae, plantrye, kontoere en watervloei, seisoenrekords, KI-ontleding en PDF-verslae met een klik. Alles wat die foon vaslê, kan die lessenaar bestudeer.",
+    },
+    note: "Voorskrifkaarte voer uit as shapefiles vir jou spuit- of strooierterminaal, en werkkaarte deel direk na jou voorman se WhatsApp.",
+    cta: "Registreer jou plaas — gratis",
   },
 };
 
