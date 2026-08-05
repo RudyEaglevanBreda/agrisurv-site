@@ -460,8 +460,8 @@ const en = {
       },
     ],
     desktop: {
-      title: "The full toolbox on your desktop",
-      body: "The same field in the browser: drone and satellite layers, planting rows, contours and water flow, season records, AI analysis and one-click PDF reports. Everything the phone captures, the desk can study.",
+      title: "Phone in the field, desktop for the deep work",
+      body: "Farm Vision lives on your phone — that's where farming happens. It installs straight from the browser in seconds (no app store), and fields you've opened keep working when the signal drops in the middle of a block. Then, when you're back at the desk, the same farm opens in your browser with the full toolbox: every drone and satellite layer, planting rows, contours and water flow, season records, AI analysis and one-click PDF reports.",
     },
     note: "Prescription maps export as shapefiles for your sprayer or spreader terminal, and job sheets share straight to your foreman's WhatsApp.",
     cta: "Register your farm — free",
@@ -946,8 +946,8 @@ const af: Dict = {
       },
     ],
     desktop: {
-      title: "Die volle gereedskapkis op jou lessenaar",
-      body: "Dieselfde land in die blaaier: hommeltuig- en satellietlae, plantrye, kontoere en watervloei, seisoenrekords, KI-ontleding en PDF-verslae met een klik. Alles wat die foon vaslê, kan die lessenaar bestudeer.",
+      title: "Foon in die land, lessenaar vir die dieper werk",
+      body: "Farm Vision leef op jou foon — dis waar boerdery gebeur. Dit installeer binne sekondes direk uit die blaaier (geen app-winkel nie), en lande wat jy al oopgemaak het, werk voort wanneer die sein in die middel van 'n land wegval. Terug by die lessenaar maak dieselfde plaas in jou blaaier oop met die volle gereedskapkis: elke hommeltuig- en satellietlaag, plantrye, kontoere en watervloei, seisoenrekords, KI-ontleding en PDF-verslae met een klik.",
     },
     note: "Voorskrifkaarte voer uit as shapefiles vir jou spuit- of strooierterminaal, en werkkaarte deel direk na jou voorman se WhatsApp.",
     cta: "Registreer jou plaas — gratis",
