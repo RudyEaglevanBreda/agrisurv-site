@@ -81,13 +81,18 @@ export default function BoundaryAudit() {
           </div>
         </Reveal>
 
+        {/* The price sits here, where the farmer is actually reading about it, rather than
+            as a second add-on strip down in Pricing saying the same thing twice. */}
         <Reveal>
           <div className="mt-10 flex flex-col items-center gap-5 text-center">
-            <p className="max-w-2xl text-[14px] leading-relaxed text-forest-500">{b.note}</p>
+            <p className="rounded-2xl bg-cream px-5 py-3 text-[15px] font-semibold text-forest-800">
+              {b.priceLine}
+            </p>
             <a href="#contact" className="btn-primary">
               {b.cta}
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </a>
+            <p className="max-w-2xl text-[14px] leading-relaxed text-forest-500">{b.note}</p>
           </div>
         </Reveal>
       </div>

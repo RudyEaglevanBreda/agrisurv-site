@@ -26,7 +26,9 @@ const en = {
   },
 
   nav: {
-    services: "Services",
+    services: "What you get",
+    app: "The app",
+    boundary: "Your hectares",
     how: "How it works",
     equipment: "Equipment",
     pricing: "Pricing",
@@ -39,106 +41,58 @@ const en = {
     portal: "Register your farm — free",
     portalLogin: "Farmer sign-in",
     seeHow: "See how it works",
+    whatsapp: "WhatsApp us",
     home: "AgriSurv home",
     openMenu: "Open menu",
     closeMenu: "Close menu",
   },
 
   hero: {
-    eyebrow: "Precision agriculture, from above",
-    headline: { pre: "See crop stress", highlight: " weeks before ", post: "the eye can." },
-    sub: "AgriSurv flies state-of-the-art multispectral drones over your lands and turns the imagery into clear NDVI crop-health maps — so you can scout smarter, fix problems early, and protect your yield.",
+    eyebrow: "Free farm app · drone surveys from R75/ha",
+    headline: { pre: "Every rand you spend", highlight: " is per hectare. ", post: "Know your hectares." },
+    sub: "Map your farm free — every field, satellite crop health, and a spray window each morning. Fly a block when it pays, and get the stress you can't see from the bakkie, its true size, and a spray file your machine reads.",
     trust: [
-      { value: "Multispectral", label: "Calibrated sensors" },
-      { value: "48–72 hrs", label: "Report turnaround" },
-      { value: "SACAA licensed", label: "Certified drone operator" },
+      { value: "Free to start", label: "Map your farm today" },
+      { value: "From R75/ha", label: "Drone survey, 48–72 hrs" },
+      { value: "SACAA licensed", label: "UASOC.0001.2004" },
     ],
     cardTitle: "Centre pivot · 62 ha",
-    cardMeta: "NDVI crop health · multispectral drone survey",
+    cardMeta: "Crop-health map from a drone survey",
     annTitle: "Stress detected",
     annBody: "Low vigour — flagged for scouting",
   },
 
-  services: {
-    eyebrow: "What we do",
-    heading: "Aerial insights for every stage of the season",
-    sub: "One flight, many answers. We tailor each survey to the crop, the growth stage and the decision you need to make.",
-    cards: [
-      {
-        title: "NDVI crop-health mapping",
-        body: "Field-wide vegetation index maps that reveal vigour differences invisible from the ground — so you scout the right rows, not every row.",
-      },
-      {
-        title: "Water & drought stress",
-        body: "Spot under- and over-irrigated zones and failing pivots early, before stress turns into permanent yield loss.",
-      },
-      {
-        title: "Stand & emergence counts",
-        body: "Plant population and gap analysis after planting, so you can assess establishment and plan replanting with confidence.",
-      },
-      {
-        title: "Variable-rate prescriptions",
-        body: "Zone maps and shapefiles you can load straight into your spreader or sprayer for variable-rate fertiliser and inputs.",
-      },
-      {
-        title: "Whole-farm surveys",
-        body: "Repeat flights across the season to track how each land responds — building a record of what's working and what isn't.",
-      },
-      {
-        title: "Agronomy-ready reports",
-        body: "Clear PDF and GIS deliverables your agronomist can act on — annotated hotspots, zone stats and field notes.",
-      },
-    ],
-  },
-
-  process: {
-    eyebrow: "How it works",
-    heading: "From take-off to decision in days",
-    sub: "A simple, repeatable process — we handle the flying and the data, you get answers you can use.",
-    steps: [
-      {
-        title: "Plan the flight",
-        body: "We agree on the fields, timing and what you want to learn, then schedule flights around your crop's growth stage and the weather window.",
-      },
-      {
-        title: "Capture the data",
-        body: "Our licensed pilots fly calibrated multispectral drones over your lands, capturing every hectare at centimetre-level resolution.",
-      },
-      {
-        title: "Process & analyse",
-        body: "Imagery is stitched, radiometrically calibrated and turned into NDVI and zone maps — then reviewed for the patterns that matter.",
-      },
-      {
-        title: "Deliver insights",
-        body: "You receive clear maps, prescription files and a plain-language report within 48–72 hours — ready to act on in the field.",
-      },
-    ],
-  },
-
-  sample: {
-    eyebrow: "The deliverable",
-    heading: "Imagery is nice. Decisions are better.",
-    sub: "We don't just hand over pretty pictures. Every survey becomes a practical set of insights your team can act on the same week.",
-    cardTitle: "The dashboard in action",
-    cardMeta: "One field, every layer — satellite, crop health, terrain & water",
-    insights: [
-      {
-        title: "Pinpointed hotspots",
-        body: "Every stressed zone is located by GPS so your team drives straight to the problem.",
-      },
-      {
-        title: "Season-over-season trends",
-        body: "Compare repeat flights to see whether an intervention actually moved the needle.",
-      },
-      {
-        title: "Management zones",
-        body: "Fields split into clear vigour zones for targeted scouting and variable-rate inputs.",
-      },
-      {
-        title: "Ready-to-use files",
-        body: "Annotated PDF report plus GeoTIFF and shapefile exports for your GIS or controller.",
-      },
-    ],
+  offer: {
+    eyebrow: "What you get",
+    heading: "Free to start. Fly when it pays.",
+    sub: "You do not buy anything to begin. Map your farm, watch it from space and get your spray windows — free, for good. A drone survey is what you add when you need to see detail the satellite cannot.",
+    free: {
+      label: "No monthly fee",
+      price: "Free",
+      title: "Your farm on a map",
+      items: [
+        "Draw your fields, or adopt your official Surveyor-General boundary in one click",
+        "Satellite crop health for every block, updated as new images come in",
+        "Daily spray windows — wind, rain and Delta-T for your field, not the nearest town",
+        "Growing degree days and crop stage from your planting date",
+        "Works on the phone in your pocket, and keeps working when the signal drops",
+      ],
+      cta: "Register your farm — free",
+    },
+    paid: {
+      label: "With a drone survey",
+      price: "From R75/ha",
+      title: "Detail a satellite cannot give you",
+      items: [
+        "Crop-health maps at centimetre detail — see single plants, not 10 m blocks",
+        "Under- and over-watered zones, and failing pivots, before the damage sets in",
+        "Plant stand and gaps after emergence, so you can plan replanting",
+        "Terrain, water flow and the hollows that will pond after rain",
+        "Your blocks' true size measured off the imagery — the boundary audit",
+        "Spray and spreader files, plus a job sheet your operator can follow",
+      ],
+      cta: "Get a quote",
+    },
   },
 
   equipment: {
@@ -213,24 +167,29 @@ const en = {
         body: "Tons per hectare, cost per hectare, margin per hectare — every figure you compare between blocks and between seasons is divided by a number that was never measured.",
       },
     ],
+    priceLine: "Every block you have flown gets measured — included with any survey. Want only the hectares checked? We quote a boundary-only flight per farm.",
     note: "This gives you a working boundary for farming maths — the true cropped area of the block. It is not a legal survey; cadastral boundaries stay the work of a licensed land surveyor.",
     cta: "Ask for a boundary audit",
   },
 
   pricing: {
     eyebrow: "Pricing",
-    heading: "Simple, per-hectare pricing",
-    sub: "Pay for what you fly. Rates scale with area and frequency — the more you survey, the lower the per-hectare cost.",
+    heading: "The app is free. You pay to fly.",
+    sub: "Mapping your farm, satellite crop health and daily spray windows cost nothing and always will. Surveys are priced per hectare, and the rate drops the more you fly.",
     popular: "Most popular",
+    freeRow: {
+      label: "Start here",
+      name: "The Farm Vision app",
+      price: "Free",
+      blurb: "Map your fields, watch them from space, and get spray windows every day. No card, no trial period, no call with a salesperson.",
+      cta: "Register your farm — free",
+    },
+    example: {
+      label: "What that looks like",
+      body: "A 40 ha block, flown once: about R3 000 for the survey. The same block on a season plan of five flights: about R11 000 for the season. We quote before anything is booked.",
+    },
     disclaimer:
       "Indicative rates in ZAR, excl. VAT. Minimum call-out applies. Final quote depends on area, location and flight frequency.",
-    addon: {
-      label: "Add-on",
-      name: "Boundary & hectare audit",
-      price: "Quoted per farm",
-      blurb: "We measure the true cropped area of every block from the survey imagery and correct the sizes your whole operation is planned on. Included with any survey — or flown on its own as a boundary-only mapping job.",
-      cta: "Ask for a boundary audit",
-    },
     tiers: [
       {
         name: "Single Survey",
@@ -282,15 +241,14 @@ const en = {
     eyebrow: "About AgriSurv",
     heading: "Precision agriculture, made practical for South African farmers",
     paragraphs: [
-      "AgriSurv was founded on a simple idea: the technology that lets you see crop stress from above shouldn't be locked away in research labs and big-corporate budgets. It belongs in the hands of the people growing the food.",
-      "We pair state-of-the-art multispectral drones with proper agronomic interpretation, so every flight ends with insight you can act on — not a folder of images you have to decode yourself.",
-      "From a single problem field to a whole-farm programme across the season, we're here to help you protect yield, cut waste and farm with confidence.",
       "AgriSurv is the precision-agriculture division of Techno Survey Solutions, a SACAA-licensed drone operator (UASOC.0001.2004/G1240D) whose team has flown surveys for some of South Africa's biggest names in mining, energy and construction — including Anglo American, Eskom and Assmang. We bring that same survey-grade discipline to your farm.",
+      "That is the point of this company: the technology that measures a mine to the centimetre should not be locked away in corporate budgets while a farmer guesses at the size of his own block. Same instruments, same discipline, aimed at the people growing the food.",
+      "We are based in Worcester and fly across South Africa, from a single problem field to a whole-farm programme across the season.",
     ],
     values: [
       {
-        title: "Decisions, not just data",
-        body: "We translate imagery into clear actions a farmer can take this week.",
+        title: "Measured, not estimated",
+        body: "Survey-grade positioning and calibration, so the numbers hold up season after season.",
       },
       {
         title: "Built for the field",
@@ -310,8 +268,20 @@ const en = {
   faq: {
     eyebrow: "Questions",
     heading: "Frequently asked",
-    sub: "Everything you need to know before your first flight.",
+    sub: "The app, the flying and what you walk away with.",
     items: [
+      {
+        q: "Is the app really free, or is it a trial?",
+        a: "Really free. Mapping your fields, satellite crop health, daily spray windows and growing degree days cost nothing, with no card and no time limit. We make our money when you decide a block is worth flying — and you can use the app for a whole season without ever booking one.",
+      },
+      {
+        q: "Do I need to install anything?",
+        a: "No app store needed. Open the site on your phone and add it to your home screen — it installs in seconds and opens like any other app. Fields you have already opened keep working when the signal drops in the middle of a block.",
+      },
+      {
+        q: "Who owns my farm data?",
+        a: "You do. Your boundaries, notes and survey layers are yours; we don't sell them or share them with input suppliers. You can share a field with your foreman or agronomist by sending them a link, and you can ask us to delete your account and its data at any time.",
+      },
       {
         q: "How quickly do I get my results?",
         a: "Most surveys are processed and delivered within 48–72 hours of the flight. Larger or multi-field jobs may take a little longer — we'll confirm a timeline when we quote.",
@@ -387,7 +357,7 @@ const en = {
 
   footer: {
     description:
-      "Drone-based NDVI crop-stress analysis for South African farmers. We turn state-of-the-art aerial imagery into decisions that protect your yield.",
+      "A free farm-mapping app for South African farmers, and centimetre-accurate drone surveys when a block is worth flying.",
     explore: "Explore",
     contact: "Contact",
     whatsappUs: "WhatsApp us",
@@ -457,15 +427,12 @@ const en = {
       },
       {
         num: "04",
-        title: "Your farm, live in your dashboard",
+        title: "Every layer lands in your farm account",
         intro:
-          "No PDFs gathering dust. You get a login to an interactive map of your farm, where every layer is one tap away.",
+          "The survey doesn't arrive as a folder of files. It appears as layers on the farm you already mapped for free — flip between them here.",
         bullets: [
           "Zoom from farm level down to individual plants on the high-resolution imagery",
-          "Flip between crop-health, terrain, drainage and prescription layers",
           "View your field in true 3D — spin and tilt the actual surface of your land",
-          "Drop pins and notes on obstacles, pipelines and problem spots",
-          "Daily spray windows (wind, rain, Delta-T), a 7-day outlook and growing degree days — for your field, not the nearest town",
           "Ponding alerts before heavy rain: which mapped hollows are likely to hold water",
         ],
         media: [
@@ -492,7 +459,7 @@ const en = {
       },
       {
         title: "Centimetre-level crop health",
-        body: "The drone NDVI over a 93 ha barley pivot. Weak rows are found automatically, and “Take me there” navigates you to the exact spot on foot or by bakkie.",
+        body: "The drone crop-health map over a barley pivot. Weak rows are found automatically, and “Take me there” navigates you to the exact spot on foot or by bakkie. (The size in the corner is the one on record — the next section is about how wrong it is.)",
       },
       {
         title: "Tap what you want to spray",
@@ -507,7 +474,7 @@ const en = {
       title: "Phone in the field, desktop for the deep work",
       body: "Farm Vision lives on your phone — that's where farming happens. It installs straight from the browser in seconds (no app store), and fields you've opened keep working when the signal drops in the middle of a block. Then, when you're back at the desk, the same farm opens in your browser with the full toolbox: every drone and satellite layer, planting rows, contours and water flow, season records, AI analysis and one-click PDF reports.",
     },
-    note: "Prescription maps export as shapefiles for your sprayer or spreader terminal, and job sheets share straight to your foreman's WhatsApp.",
+    note: "Every screen here is the real app. Register free and you can open the same tools on your own farm today.",
     cta: "Register your farm — free",
     share: {
       heading: "From the app to the machine in three steps",
@@ -556,7 +523,9 @@ const af: Dict = {
   },
 
   nav: {
-    services: "Dienste",
+    services: "Wat jy kry",
+    app: "Die app",
+    boundary: "Jou hektare",
     how: "Hoe dit werk",
     equipment: "Toerusting",
     pricing: "Pryse",
@@ -569,106 +538,58 @@ const af: Dict = {
     portal: "Registreer jou plaas — gratis",
     portalLogin: "Boer-aanmelding",
     seeHow: "Sien hoe dit werk",
+    whatsapp: "WhatsApp ons",
     home: "AgriSurv tuis",
     openMenu: "Maak kieslys oop",
     closeMenu: "Maak kieslys toe",
   },
 
   hero: {
-    eyebrow: "Presisieboerdery, van bo af",
-    headline: { pre: "Sien gewasstremming", highlight: " weke voordat ", post: "die oog dit raaksien." },
-    sub: "AgriSurv vlieg moderne multispektraal-drones oor jou lande en omskep die beelde in duidelike NDVI-gewasgesondheidskaarte — sodat jy slimmer kan verken, probleme vroeg kan regstel en jou opbrengs kan beskerm.",
+    eyebrow: "Gratis plaas-app · droneopnames vanaf R75/ha",
+    headline: { pre: "Elke rand wat jy spandeer", highlight: " is per hektaar. ", post: "Ken jou hektare." },
+    sub: "Karteer jou plaas gratis — elke land, satelliet-gewasgesondheid, en elke oggend 'n spuitvenster. Vlieg 'n blok wanneer dit betaal, en kry die stremming wat jy nie van die bakkie af sien nie, sy ware grootte, en 'n spuitlêer wat jou masjien lees.",
     trust: [
-      { value: "Multispektraal", label: "Gekalibreerde sensors" },
-      { value: "48–72 uur", label: "Verslag-omkeertyd" },
-      { value: "SACAA-gelisensieer", label: "Gesertifiseerde drone-operateur" },
+      { value: "Gratis om te begin", label: "Karteer jou plaas vandag" },
+      { value: "Vanaf R75/ha", label: "Droneopname, 48–72 uur" },
+      { value: "SACAA-gelisensieer", label: "UASOC.0001.2004" },
     ],
     cardTitle: "Spilpunt · 62 ha",
-    cardMeta: "NDVI-gewasgesondheid · multispektraal-droneopname",
+    cardMeta: "Gewasgesondheidskaart uit 'n droneopname",
     annTitle: "Stremming bespeur",
     annBody: "Lae groeikrag — gemerk vir verkenning",
   },
 
-  services: {
-    eyebrow: "Wat ons doen",
-    heading: "Lugkundige insigte vir elke stadium van die seisoen",
-    sub: "Een vlug, baie antwoorde. Ons pas elke opname aan by die gewas, die groeistadium en die besluit wat jy moet neem.",
-    cards: [
-      {
-        title: "NDVI-gewasgesondheidskaarte",
-        body: "Veldwye plantegroei-indekskaarte wat groeikragverskille uitwys wat van die grond af onsigbaar is — sodat jy die regte rye verken, nie elke ry nie.",
-      },
-      {
-        title: "Water- en droogtestremming",
-        body: "Bespeur onder- en oorbesproeide sones en falende spilpunte vroeg, voordat stremming in permanente opbrengsverlies verander.",
-      },
-      {
-        title: "Stand- en opkomstellings",
-        body: "Plantbevolking- en gapingsontleding ná planting, sodat jy vestiging kan beoordeel en herplanting met vertroue kan beplan.",
-      },
-      {
-        title: "Veranderlike-tempo voorskrifte",
-        body: "Sonekaarte en shapefiles wat jy direk in jou strooier of spuit kan laai vir veranderlike-tempo kunsmis en insette.",
-      },
-      {
-        title: "Heelplaas-opnames",
-        body: "Herhaalde vlugte oor die seisoen om te volg hoe elke land reageer — wat 'n rekord bou van wat werk en wat nie.",
-      },
-      {
-        title: "Agronomie-gereed verslae",
-        body: "Duidelike PDF- en GIS-aflewerbares waarop jou agronoom kan reageer — geannoteerde brandpunte, sonestatistiek en veldnotas.",
-      },
-    ],
-  },
-
-  process: {
-    eyebrow: "Hoe dit werk",
-    heading: "Van opstyg tot besluit binne dae",
-    sub: "'n Eenvoudige, herhaalbare proses — ons hanteer die vlieg en die data, jy kry antwoorde wat jy kan gebruik.",
-    steps: [
-      {
-        title: "Beplan die vlug",
-        body: "Ons kom ooreen oor die lande, tydsberekening en wat jy wil uitvind, en skeduleer dan vlugte rondom jou gewas se groeistadium en die weervenster.",
-      },
-      {
-        title: "Vang die data vas",
-        body: "Ons gelisensieerde vlieëniers vlieg gekalibreerde multispektraal-drones oor jou lande en vang elke hektaar teen sentimeter-vlak resolusie vas.",
-      },
-      {
-        title: "Verwerk & ontleed",
-        body: "Beelde word saamgevoeg, radiometries gekalibreer en in NDVI- en sonekaarte omskep — en dan nagegaan vir die patrone wat saak maak.",
-      },
-      {
-        title: "Lewer insigte",
-        body: "Jy ontvang duidelike kaarte, voorskriflêers en 'n verslag in eenvoudige taal binne 48–72 uur — gereed om in die veld op te tree.",
-      },
-    ],
-  },
-
-  sample: {
-    eyebrow: "Die aflewerbare",
-    heading: "Beelde is mooi. Besluite is beter.",
-    sub: "Ons oorhandig nie net mooi prente nie. Elke opname word 'n praktiese stel insigte waarop jou span dieselfde week kan reageer.",
-    cardTitle: "Die dashboard in aksie",
-    cardMeta: "Een land, elke laag — satelliet, gewasgesondheid, terrein & water",
-    insights: [
-      {
-        title: "Presiese brandpunte",
-        body: "Elke gestremde sone word met GPS opgespoor sodat jou span reguit na die probleem ry.",
-      },
-      {
-        title: "Seisoen-tot-seisoen tendense",
-        body: "Vergelyk herhaalde vlugte om te sien of 'n ingryping werklik 'n verskil gemaak het.",
-      },
-      {
-        title: "Bestuurssones",
-        body: "Lande verdeel in duidelike groeikragsones vir gerigte verkenning en veranderlike-tempo insette.",
-      },
-      {
-        title: "Gebruiksgereed lêers",
-        body: "Geannoteerde PDF-verslag plus GeoTIFF- en shapefile-uitvoere vir jou GIS of beheerder.",
-      },
-    ],
+  offer: {
+    eyebrow: "Wat jy kry",
+    heading: "Gratis om te begin. Vlieg wanneer dit betaal.",
+    sub: "Jy koop niks om te begin nie. Karteer jou plaas, hou dit uit die ruimte dop en kry jou spuitvensters — gratis, vir altyd. 'n Droneopname is wat jy byvoeg wanneer jy detail nodig het wat die satelliet nie kan gee nie.",
+    free: {
+      label: "Geen maandelikse fooi",
+      price: "Gratis",
+      title: "Jou plaas op 'n kaart",
+      items: [
+        "Trek jou lande, of neem jou amptelike Landmeter-generaal-grens met een klik oor",
+        "Satelliet-gewasgesondheid vir elke blok, bygewerk soos nuwe beelde inkom",
+        "Daaglikse spuitvensters — wind, reën en Delta-T vir jou land, nie die naaste dorp nie",
+        "Groeigraaddae en gewasstadium vanaf jou plantdatum",
+        "Werk op die foon in jou sak, en hou aan werk wanneer die sein wegraak",
+      ],
+      cta: "Registreer jou plaas — gratis",
+    },
+    paid: {
+      label: "Met 'n droneopname",
+      price: "Vanaf R75/ha",
+      title: "Detail wat 'n satelliet nie kan gee nie",
+      items: [
+        "Gewasgesondheidskaarte op sentimeterdetail — sien enkele plante, nie 10 m-blokke nie",
+        "Onder- en oorbesproeide sones, en falende spilpunte, voordat die skade insink",
+        "Plantstand en gapings ná opkoms, sodat jy herplanting kan beplan",
+        "Terrein, watervloei en die holtes wat ná reën water gaan hou",
+        "Jou blokke se ware grootte gemeet uit die beelde — die grensoudit",
+        "Spuit- en strooierlêers, plus 'n werkkaart wat jou operateur kan volg",
+      ],
+      cta: "Kry 'n kwotasie",
+    },
   },
 
   equipment: {
@@ -743,24 +664,29 @@ const af: Dict = {
         body: "Ton per hektaar, koste per hektaar, marge per hektaar — elke syfer wat jy tussen blokke en tussen seisoene vergelyk, word gedeel deur 'n getal wat nooit gemeet is nie.",
       },
     ],
+    priceLine: "Elke blok wat jy laat vlieg het, word gemeet — ingesluit by enige opname. Wil jy net die hektare laat nagaan? Ons kwoteer 'n grens-alleen vlug per plaas.",
     note: "Dit gee jou 'n werksgrens vir boerderywiskunde — die ware beplante oppervlakte van die blok. Dit is nie 'n wetlike opmeting nie; kadastrale grense bly die werk van 'n gelisensieerde landmeter.",
     cta: "Vra vir 'n grensoudit",
   },
 
   pricing: {
     eyebrow: "Pryse",
-    heading: "Eenvoudige pryse, per hektaar",
-    sub: "Betaal vir wat jy vlieg. Tariewe skaal met oppervlakte en frekwensie — hoe meer jy opneem, hoe laer die koste per hektaar.",
+    heading: "Die app is gratis. Jy betaal om te vlieg.",
+    sub: "Om jou plaas te karteer, satelliet-gewasgesondheid en daaglikse spuitvensters kos niks en sal altyd niks kos nie. Opnames word per hektaar geprys, en die tarief daal hoe meer jy vlieg.",
     popular: "Gewildste",
+    freeRow: {
+      label: "Begin hier",
+      name: "Die Farm Vision-app",
+      price: "Gratis",
+      blurb: "Karteer jou lande, hou hulle uit die ruimte dop, en kry elke dag spuitvensters. Geen kaart, geen proeftydperk, geen oproep met 'n verkoopsman nie.",
+      cta: "Registreer jou plaas — gratis",
+    },
+    example: {
+      label: "Wat dit in die praktyk beteken",
+      body: "'n Blok van 40 ha, een keer gevlieg: ongeveer R3 000 vir die opname. Dieselfde blok op 'n seisoenplan van vyf vlugte: ongeveer R11 000 vir die seisoen. Ons kwoteer voordat enigiets bespreek word.",
+    },
     disclaimer:
       "Aanduidende tariewe in ZAR, BTW uitgesluit. Minimum uitroeptarief geld. Finale kwotasie hang af van oppervlakte, ligging en vlugfrekwensie.",
-    addon: {
-      label: "Bykomend",
-      name: "Grens- en hektaaroudit",
-      price: "Kwotasie per plaas",
-      blurb: "Ons meet die ware beplante oppervlakte van elke blok uit die opnamebeelde en korrigeer die groottes waarop jou hele bedryf beplan word. Ingesluit by enige opname — of op sy eie gevlieg as 'n grens-alleen karteringstaak.",
-      cta: "Vra vir 'n grensoudit",
-    },
     tiers: [
       {
         name: "Enkele opname",
@@ -812,15 +738,14 @@ const af: Dict = {
     eyebrow: "Oor AgriSurv",
     heading: "Presisieboerdery, prakties gemaak vir Suid-Afrikaanse boere",
     paragraphs: [
-      "AgriSurv is op 'n eenvoudige idee gebou: die tegnologie wat jou gewasstremming van bo af laat sien, behoort nie in navorsingslaboratoriums en groot korporatiewe begrotings weggesluit te wees nie. Dit hoort in die hande van die mense wat die kos verbou.",
-      "Ons kombineer moderne multispektraal-drones met behoorlike agronomiese interpretasie, sodat elke vlug eindig met insig waarop jy kan reageer — nie 'n vouer vol beelde wat jy self moet ontsyfer nie.",
-      "Van 'n enkele probleemland tot 'n heelplaas-program oor die seisoen, ons is hier om jou te help om opbrengs te beskerm, vermorsing te sny en met vertroue te boer.",
       "AgriSurv is die presisieboerdery-afdeling van Techno Survey Solutions, 'n SACAA-gelisensieerde drone-operateur (UASOC.0001.2004/G1240D) wie se span opnames gevlieg het vir van Suid-Afrika se grootste name in mynbou, energie en konstruksie — insluitend Anglo American, Eskom en Assmang. Ons bring daardie selfde opname-gehalte dissipline na jou plaas.",
+      "Dít is die punt van hierdie maatskappy: die tegnologie wat 'n myn tot op die sentimeter meet, behoort nie in korporatiewe begrotings weggesluit te wees terwyl 'n boer raai hoe groot sy eie blok is nie. Dieselfde instrumente, dieselfde dissipline, gemik op die mense wat die kos verbou.",
+      "Ons is in Worcester gebaseer en vlieg dwarsoor Suid-Afrika, van 'n enkele probleemland tot 'n heelplaas-program oor die seisoen.",
     ],
     values: [
       {
-        title: "Besluite, nie net data nie",
-        body: "Ons vertaal beelde in duidelike aksies wat 'n boer hierdie week kan neem.",
+        title: "Gemeet, nie geskat nie",
+        body: "Opname-gehalte posisionering en kalibrasie, sodat die syfers seisoen ná seisoen hou.",
       },
       {
         title: "Gebou vir die veld",
@@ -840,8 +765,20 @@ const af: Dict = {
   faq: {
     eyebrow: "Vrae",
     heading: "Algemene vrae",
-    sub: "Alles wat jy moet weet voor jou eerste vlug.",
+    sub: "Die app, die vlieg, en wat jy daaruit kry.",
     items: [
+      {
+        q: "Is die app régtig gratis, of is dit 'n proeflopie?",
+        a: "Régtig gratis. Om jou lande te karteer, satelliet-gewasgesondheid, daaglikse spuitvensters en groeigraaddae kos niks, sonder kaart en sonder tydsbeperking. Ons maak geld wanneer jy besluit 'n blok is die moeite werd om te vlieg — en jy kan die app 'n hele seisoen gebruik sonder om ooit een te bespreek.",
+      },
+      {
+        q: "Moet ek iets installeer?",
+        a: "Geen toepassingswinkel nodig nie. Maak die werf op jou foon oop en voeg dit by jou tuisskerm — dit installeer binne sekondes en maak oop soos enige ander app. Lande wat jy reeds oopgemaak het, werk voort wanneer die sein in die middel van 'n blok wegraak.",
+      },
+      {
+        q: "Wie besit my plaasdata?",
+        a: "Jy. Jou grense, notas en opnamelae is joune; ons verkoop dit nie en deel dit nie met insetverskaffers nie. Jy kan 'n land met jou voorman of agronoom deel deur vir hulle 'n skakel te stuur, en jy kan ons enige tyd vra om jou rekening en sy data te skrap.",
+      },
       {
         q: "Hoe vinnig kry ek my resultate?",
         a: "Die meeste opnames word binne 48–72 uur ná die vlug verwerk en gelewer. Groter of meerveld-werke kan 'n bietjie langer neem — ons bevestig 'n tydlyn wanneer ons kwoteer.",
@@ -917,7 +854,7 @@ const af: Dict = {
 
   footer: {
     description:
-      "Drone-gebaseerde NDVI-gewasstremmingontleding vir Suid-Afrikaanse boere. Ons omskep moderne lugbeelde in besluite wat jou opbrengs beskerm.",
+      "'n Gratis plaaskarteringsapp vir Suid-Afrikaanse boere, en sentimeter-akkurate droneopnames wanneer 'n blok die moeite werd is om te vlieg.",
     explore: "Verken",
     contact: "Kontak",
     whatsappUs: "WhatsApp ons",
@@ -987,15 +924,12 @@ const af: Dict = {
       },
       {
         num: "04",
-        title: "Jou plaas, lewendig in jou dashboard",
+        title: "Elke laag land in jou plaasrekening",
         intro:
-          "Geen PDF's wat stof vergaar nie. Jy kry 'n aanmelding by 'n interaktiewe kaart van jou plaas, waar elke laag een tik ver is.",
+          "Die opname kom nie as 'n vouer vol lêers aan nie. Dit verskyn as lae op die plaas wat jy reeds gratis gekarteer het — wissel hier tussen hulle.",
         bullets: [
           "Zoem van plaasvlak af tot by individuele plante op die hoëresolusie-beelde",
-          "Wissel tussen gewasgesondheid-, terrein-, dreinering- en voorskriflae",
           "Bekyk jou land in ware 3D — draai en kantel die werklike oppervlak van jou grond",
-          "Los penne en notas op hindernisse, pyplyne en probleemkolle",
-          "Daaglikse spuitvensters (wind, reën, Delta-T), 'n 7-dag-vooruitskatting en groeigraaddae — vir jou land, nie die naaste dorp nie",
           "Poel-waarskuwings voor swaar reën: watter gekarteerde holtes waarskynlik water sal hou",
         ],
         media: [
@@ -1022,7 +956,7 @@ const af: Dict = {
       },
       {
         title: "Gewasgesondheid tot op sentimeter",
-        body: "Die hommeltuig-NDVI oor 'n 93 ha garsspilpunt. Swak rye word vanself gevind, en “Vat my soontoe” lei jou te voet of per bakkie tot op die presiese kol.",
+        body: "Die drone-gewasgesondheidskaart oor 'n garsspilpunt. Swak rye word vanself gevind, en “Vat my soontoe” lei jou te voet of per bakkie tot op die presiese kol. (Die grootte in die hoek is dié op rekord — die volgende afdeling gaan oor hoe verkeerd dit is.)",
       },
       {
         title: "Tik wat jy wil spuit",
@@ -1037,7 +971,7 @@ const af: Dict = {
       title: "Foon in die land, lessenaar vir die dieper werk",
       body: "Farm Vision leef op jou foon — dis waar boerdery gebeur. Dit installeer binne sekondes direk uit die blaaier (geen app-winkel nie), en lande wat jy al oopgemaak het, werk voort wanneer die sein in die middel van 'n land wegval. Terug by die lessenaar maak dieselfde plaas in jou blaaier oop met die volle gereedskapkis: elke hommeltuig- en satellietlaag, plantrye, kontoere en watervloei, seisoenrekords, KI-ontleding en PDF-verslae met een klik.",
     },
-    note: "Voorskrifkaarte voer uit as shapefiles vir jou spuit- of strooierterminaal, en werkkaarte deel direk na jou voorman se WhatsApp.",
+    note: "Elke skerm hier is die regte app. Registreer gratis en jy kan vandag dieselfde gereedskap op jou eie plaas oopmaak.",
     cta: "Registreer jou plaas — gratis",
     share: {
       heading: "Van die app tot by die masjien in drie stappe",

@@ -1,10 +1,9 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Services from "@/components/Services";
+import WhatYouGet from "@/components/WhatYouGet";
 import HowItWorks from "@/components/HowItWorks";
 import AppTour from "@/components/AppTour";
 import BoundaryAudit from "@/components/BoundaryAudit";
-import SampleReport from "@/components/SampleReport";
 import Equipment from "@/components/Equipment";
 import Pricing from "@/components/Pricing";
 import About from "@/components/About";
@@ -18,7 +17,7 @@ const jsonLd = {
   "@type": "ProfessionalService",
   name: site.name,
   description:
-    "Drone-based NDVI crop-stress analysis and multispectral aerial imagery for South African farmers.",
+    "A free farm-mapping app with satellite crop health and daily spray windows, plus centimetre-accurate drone crop surveys, field-size (boundary) audits and variable-rate prescription files for South African farmers.",
   url: site.url,
   email: site.email,
   areaServed: site.serviceArea,
@@ -41,12 +40,13 @@ export default function Home() {
       </a>
       <Header />
       <main id="main">
+        {/* Order matters: the two things no competitor can say — the app and the
+            hectare audit — sit in the first four screens, not below the fold. */}
         <Hero />
-        <Services />
-        <HowItWorks />
-        <AppTour />
+        <WhatYouGet />
         <BoundaryAudit />
-        <SampleReport />
+        <AppTour />
+        <HowItWorks />
         <Equipment />
         <Pricing />
         <About />

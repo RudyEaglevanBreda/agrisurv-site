@@ -9,8 +9,11 @@ export default function Footer() {
   const { t } = useLang();
   const year = new Date().getFullYear();
 
+  // The footer carries the full list, including the sections the header nav drops.
   const navItems = [
     { label: t.nav.services, href: "#services" },
+    { label: t.nav.boundary, href: "#boundary" },
+    { label: t.nav.app, href: "#app" },
     { label: t.nav.how, href: "#process" },
     { label: t.nav.equipment, href: "#equipment" },
     { label: t.nav.pricing, href: "#pricing" },

@@ -12,12 +12,14 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
+  // The nav mirrors the page order. #app and #boundary used to be unreachable from
+  // here — over a thousand words and nine screenshots that only scrolling could find.
   const navItems = [
     { label: t.nav.services, href: "#services" },
+    { label: t.nav.boundary, href: "#boundary" },
+    { label: t.nav.app, href: "#app" },
     { label: t.nav.how, href: "#process" },
-    { label: t.nav.equipment, href: "#equipment" },
     { label: t.nav.pricing, href: "#pricing" },
-    { label: t.nav.about, href: "#about" },
     { label: t.nav.faq, href: "#faq" },
   ];
 

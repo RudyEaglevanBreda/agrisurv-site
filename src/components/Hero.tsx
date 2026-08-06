@@ -1,12 +1,13 @@
 "use client";
 
-import { ArrowRight, Sparkles, Plane, Clock, ShieldCheck } from "lucide-react";
+import { ArrowRight, MessageCircle, Sparkles, Smartphone, Plane, ShieldCheck } from "lucide-react";
 import { NdviLegend } from "./NdviField";
 import Zoomable from "./Zoomable";
 import { useLang } from "./LanguageProvider";
 import { PORTAL_REGISTER_URL } from "../lib/portal";
+import { whatsappLink } from "../lib/site";
 
-const TRUST_ICONS = [Plane, Clock, ShieldCheck];
+const TRUST_ICONS = [Smartphone, Plane, ShieldCheck];
 
 export default function Hero() {
   const { t } = useLang();
@@ -19,9 +20,12 @@ export default function Hero() {
         <div className="absolute top-40 -left-32 h-96 w-96 rounded-full bg-forest-200/30 blur-3xl" />
       </div>
 
-      <div className="container-page relative grid items-center gap-12 py-16 sm:py-20 lg:grid-cols-[1.05fr_1fr] lg:gap-10 lg:py-28">
+      {/* Explicit grid placement so the phone gets copy → picture → trust badges (the
+          picture used to sit below all three, off the first screen entirely), while the
+          desktop keeps copy and badges stacked beside the image. */}
+      <div className="container-page relative flex flex-col gap-8 py-16 sm:py-20 lg:grid lg:grid-cols-[1.05fr_1fr] lg:items-center lg:gap-x-10 lg:gap-y-8 lg:py-28">
         {/* Copy */}
-        <div className="max-w-xl">
+        <div className="max-w-xl lg:col-start-1 lg:row-start-1">
           <span className="eyebrow">
             <Sparkles className="h-3.5 w-3.5" aria-hidden="true" />
             {t.hero.eyebrow}
@@ -37,46 +41,23 @@ export default function Hero() {
             {t.hero.sub}
           </p>
 
+          {/* One primary action, one low-commitment escape hatch. Three equal-weight
+              buttons was three decisions on the first screen of a phone. */}
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <a href={PORTAL_REGISTER_URL} className="btn-primary">
               {t.cta.portal}
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </a>
-            <a href="#contact" className="btn-ghost">
-              {t.cta.quote}
-            </a>
-            <a href="#process" className="btn-ghost">
-              {t.cta.seeHow}
+            <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="btn-ghost">
+              <MessageCircle className="h-4 w-4" aria-hidden="true" />
+              {t.cta.whatsapp}
             </a>
           </div>
 
-          {/* Trust points — stacked list on narrow phones, 3-up once there's room */}
-          <dl className="mt-10 grid grid-cols-1 gap-4 border-t border-forest-100 pt-6 min-[480px]:grid-cols-3">
-            {t.hero.trust.map((item, i) => {
-              const Icon = TRUST_ICONS[i];
-              return (
-                <div
-                  key={item.label}
-                  className="flex items-start gap-3 min-[480px]:block"
-                >
-                  <Icon
-                    className="h-5 w-5 shrink-0 text-leaf-600 min-[480px]:mb-2"
-                    aria-hidden="true"
-                  />
-                  <div className="min-w-0">
-                    <dt className="font-display text-base font-bold text-forest-800">
-                      {item.value}
-                    </dt>
-                    <dd className="text-sm text-forest-600">{item.label}</dd>
-                  </div>
-                </div>
-              );
-            })}
-          </dl>
         </div>
 
         {/* Visual — real NDVI layer from a drone survey */}
-        <div className="relative">
+        <div className="relative lg:col-start-2 lg:row-start-1 lg:row-span-2">
           <div className="rounded-[28px] border border-forest-100 bg-white p-3 shadow-card">
             <Zoomable src="/process/hero-ndvi.webp" alt={t.common.mapAria}>
               <div className="relative overflow-hidden rounded-3xl">
@@ -116,6 +97,29 @@ export default function Hero() {
             </p>
             <p className="mt-0.5 text-xs text-forest-600">{t.hero.annBody}</p>
           </div>
+        </div>
+
+        {/* Trust points — stacked list on narrow phones, 3-up once there's room */}
+        <div className="max-w-xl lg:col-start-1 lg:row-start-2">
+          <dl className="grid grid-cols-1 gap-4 border-t border-forest-100 pt-6 min-[480px]:grid-cols-3">
+            {t.hero.trust.map((item, i) => {
+              const Icon = TRUST_ICONS[i];
+              return (
+                <div key={item.label} className="flex items-start gap-3 min-[480px]:block">
+                  <Icon
+                    className="h-5 w-5 shrink-0 text-leaf-600 min-[480px]:mb-2"
+                    aria-hidden="true"
+                  />
+                  <div className="min-w-0">
+                    <dt className="font-display text-base font-bold text-forest-800">
+                      {item.value}
+                    </dt>
+                    <dd className="text-sm text-forest-600">{item.label}</dd>
+                  </div>
+                </div>
+              );
+            })}
+          </dl>
         </div>
       </div>
     </section>

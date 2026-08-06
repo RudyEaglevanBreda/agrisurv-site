@@ -29,7 +29,7 @@ export const site = {
   parentUrl: "https://technosurveys.co.za",
   sacaaLicence: "SACAA.UASOC.0001.2004/G1240D",
   whatsappMessage:
-    "Hi AgriSurv, I'd like a quote for drone NDVI crop analysis on my farm.",
+    "Hi AgriSurv, I'd like a quote for a drone survey on my farm.",
 } as const;
 
 /** Build a click-to-chat WhatsApp link with a pre-filled message. */

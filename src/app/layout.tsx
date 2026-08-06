@@ -20,20 +20,20 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} — Drone NDVI Crop Stress Analysis`,
+    default: `${site.name} — Free Farm Mapping App & Drone Crop Surveys`,
     template: `%s — ${site.name}`,
   },
   description:
-    "AgriSurv flies state-of-the-art multispectral drones to map crop stress, water issues and yield risk across South African farms — turning aerial imagery into field-ready insights.",
+    "Map your farm free: field boundaries, satellite crop health and daily spray windows on your phone. Then add a centimetre-accurate drone survey — crop-health maps, true block sizes and prescription files for your sprayer. Western Cape, flying nationwide.",
   keywords: [
-    "NDVI",
-    "drone crop analysis",
-    "precision agriculture",
-    "crop stress mapping",
-    "multispectral imagery",
-    "South Africa farming",
-    "agritech",
-    "variable rate application",
+    "free farm mapping app",
+    "farm management app South Africa",
+    "drone crop survey",
+    "NDVI crop health",
+    "field size measurement",
+    "variable rate prescription shapefile",
+    "spray window weather",
+    "precision agriculture Western Cape",
   ],
   authors: [{ name: site.name }],
   openGraph: {
@@ -41,15 +41,15 @@ export const metadata: Metadata = {
     locale: "en_ZA",
     url: site.url,
     siteName: site.name,
-    title: `${site.name} — Drone NDVI Crop Stress Analysis`,
+    title: `${site.name} — Free Farm Mapping App & Drone Crop Surveys`,
     description:
-      "Multispectral drone imagery and NDVI analysis that helps South African farmers spot crop stress early and lift yields.",
+      "Map your farm free, get daily spray windows, and fly a centimetre-accurate survey when a block is worth it — crop health, true hectares and sprayer-ready files.",
   },
   twitter: {
     card: "summary_large_image",
-    title: `${site.name} — Drone NDVI Crop Stress Analysis`,
+    title: `${site.name} — Free Farm Mapping App & Drone Crop Surveys`,
     description:
-      "Multispectral drone imagery and NDVI analysis for South African farms.",
+      "Free farm mapping and spray windows, plus centimetre-accurate drone crop surveys for South African farms.",
   },
   robots: { index: true, follow: true },
 };
