@@ -28,7 +28,7 @@ const en = {
   nav: {
     services: "What you get",
     app: "The app",
-    boundary: "Your hectares",
+    boundary: "Hectares",
     how: "How it works",
     equipment: "Equipment",
     pricing: "Pricing",
@@ -526,7 +526,7 @@ const af: Dict = {
   nav: {
     services: "Wat jy kry",
     app: "Die app",
-    boundary: "Jou hektare",
+    boundary: "Hektare",
     how: "Hoe dit werk",
     equipment: "Toerusting",
     pricing: "Pryse",

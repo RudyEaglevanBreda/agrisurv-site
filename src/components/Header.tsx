@@ -58,7 +58,7 @@ export default function Header() {
             <a
               key={item.href}
               href={item.href}
-              className="rounded-[2px] px-3 py-2 text-[13.5px] font-medium text-forest-700 transition-colors hover:bg-forest-50 hover:text-forest-900"
+              className="whitespace-nowrap rounded-[2px] px-2.5 py-2 text-[13px] font-medium text-forest-700 transition-colors hover:bg-forest-50 hover:text-forest-900 xl:px-3.5 xl:text-[13.5px]"
             >
               {item.label}
             </a>
