@@ -1,13 +1,23 @@
 import type { Metadata } from "next";
-import { Sora, Inter } from "next/font/google";
+import { Archivo, IBM_Plex_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { site } from "@/lib/site";
 import { LanguageProvider } from "@/components/LanguageProvider";
 
-const sora = Sora({
-  variable: "--font-sora",
+// Archivo for headlines (signage/technical print), Plex Mono for the survey-margin
+// labels and figures, Inter for body — it stays the most legible at arm's length
+// on a phone, which matters for readers whose first language is Afrikaans.
+const archivo = Archivo({
+  variable: "--font-archivo",
   subsets: ["latin"],
   weight: ["500", "600", "700", "800"],
+  display: "swap",
+});
+
+const plexMono = IBM_Plex_Mono({
+  variable: "--font-plex-mono",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
   display: "swap",
 });
 
@@ -62,7 +72,7 @@ export default function RootLayout({
   return (
     <html
       lang="en-ZA"
-      className={`${sora.variable} ${inter.variable} h-full antialiased`}
+      className={`${archivo.variable} ${plexMono.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-white">
         <LanguageProvider>{children}</LanguageProvider>

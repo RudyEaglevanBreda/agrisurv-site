@@ -39,6 +39,7 @@ const en = {
   cta: {
     quote: "Get a quote",
     portal: "Register your farm — free",
+    portalShort: "Register free",
     portalLogin: "Farmer sign-in",
     seeHow: "See how it works",
     whatsapp: "WhatsApp us",
@@ -536,6 +537,7 @@ const af: Dict = {
   cta: {
     quote: "Kry 'n kwotasie",
     portal: "Registreer jou plaas — gratis",
+    portalShort: "Registreer gratis",
     portalLogin: "Boer-aanmelding",
     seeHow: "Sien hoe dit werk",
     whatsapp: "WhatsApp ons",

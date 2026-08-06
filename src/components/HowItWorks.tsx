@@ -2,6 +2,7 @@
 
 import { ArrowRight } from "lucide-react";
 import Reveal from "./Reveal";
+import SectionHead from "./SectionHead";
 import LayerSwitcher from "./LayerSwitcher";
 import Zoomable from "./Zoomable";
 import { useLang } from "./LanguageProvider";
@@ -53,7 +54,7 @@ function Shot({
 }) {
   return (
     <Zoomable src={src} alt={caption}>
-      <figure className="relative overflow-hidden rounded-2xl border border-forest-100 bg-forest-50 shadow-soft transition-shadow duration-200 hover:shadow-card">
+      <figure className="relative overflow-hidden rounded-[3px] border border-forest-200 bg-forest-50 shadow-none transition-shadow duration-200 hover:shadow-none">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={src}
@@ -66,7 +67,7 @@ function Shot({
           .map((c, i) => (
             <span
               key={i}
-              className="pointer-events-none absolute z-10 hidden -translate-x-1/2 -translate-y-1/2 items-center gap-1.5 rounded-full bg-white/95 px-2.5 py-1 text-[11px] font-semibold text-forest-800 shadow-card ring-1 ring-forest-100 sm:inline-flex"
+              className="pointer-events-none absolute z-10 hidden -translate-x-1/2 -translate-y-1/2 items-center gap-1.5 rounded-[2px] bg-white/95 px-2.5 py-1 font-mono text-[10.5px] font-medium uppercase tracking-[0.1em] text-forest-800 ring-1 ring-forest-300 sm:inline-flex"
               style={{ left: `${c.x}%`, top: `${c.y}%` }}
             >
               <span className="h-1.5 w-1.5 rounded-full bg-leaf-500" />
@@ -88,13 +89,7 @@ export default function HowItWorks() {
   return (
     <section id="process" className="bg-white py-20 sm:py-28">
       <div className="container-page">
-        <div className="mx-auto max-w-2xl text-center">
-          <span className="eyebrow">{hw.eyebrow}</span>
-          <h2 className="mt-4 font-display text-3xl font-bold tracking-tight text-forest-800 sm:text-4xl">
-            {hw.heading}
-          </h2>
-          <p className="mt-4 text-lg text-forest-600">{hw.sub}</p>
-        </div>
+        <SectionHead index="04" kicker={hw.eyebrow} heading={hw.heading} sub={hw.sub} />
 
         <div className="mt-16 space-y-16 lg:space-y-24">
           {hw.steps.map((step, i) => {
@@ -106,7 +101,7 @@ export default function HowItWorks() {
                   {/* Text */}
                   <div className={mediaRight ? "lg:order-1" : "lg:order-2"}>
                     <div className="flex items-center gap-3">
-                      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-forest-800 font-display text-sm font-bold text-leaf-300">
+                      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[3px] bg-forest-800 font-display text-sm font-bold text-leaf-300">
                         {step.num}
                       </span>
                       <span className="h-px flex-1 bg-forest-100" />
@@ -166,7 +161,7 @@ export default function HowItWorks() {
 
         {/* Closing band */}
         <Reveal>
-          <div className="mt-16 rounded-3xl bg-forest-800 p-8 text-center text-white sm:mt-24 sm:p-12">
+          <div className="mt-16 rounded-[3px] bg-forest-800 p-8 text-center text-white sm:mt-24 sm:p-12">
             <h3 className="font-display text-2xl font-bold sm:text-3xl">
               {hw.closing.title}
             </h3>

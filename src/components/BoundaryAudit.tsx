@@ -2,6 +2,7 @@
 
 import { ArrowRight, Banknote, Ruler, Scale } from "lucide-react";
 import Reveal from "./Reveal";
+import SectionHead from "./SectionHead";
 import Zoomable from "./Zoomable";
 import { useLang } from "./LanguageProvider";
 
@@ -23,13 +24,7 @@ export default function BoundaryAudit() {
   return (
     <section id="boundary" className="bg-white py-20 sm:py-28">
       <div className="container-page">
-        <div className="mx-auto max-w-2xl text-center">
-          <span className="eyebrow">{b.eyebrow}</span>
-          <h2 className="mt-4 font-display text-3xl font-bold tracking-tight text-forest-800 sm:text-4xl">
-            {b.heading}
-          </h2>
-          <p className="mt-4 text-lg text-forest-600">{b.sub}</p>
-        </div>
+        <SectionHead index="02" kicker={b.eyebrow} heading={b.heading} sub={b.sub} />
 
         {/* the measurement, in the farmer's own hand */}
         <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
@@ -37,13 +32,13 @@ export default function BoundaryAudit() {
             <Reveal key={ph.title} delay={i * 80}>
               <figure className="h-full">
                 <Zoomable src={PHONE_SHOTS[i]} alt={ph.title}>
-                  <div className="overflow-hidden rounded-[1.75rem] border-[6px] border-forest-800 bg-forest-800 shadow-card transition-shadow duration-300 hover:shadow-lg">
+                  <div className="overflow-hidden rounded-[4px] border-[6px] border-forest-800 bg-forest-800 shadow-none transition-shadow duration-300 hover:border-forest-400">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={PHONE_SHOTS[i]}
                       alt={ph.title}
                       loading="lazy"
-                      className="block w-full rounded-[1.4rem]"
+                      className="block w-full rounded-[2px]"
                     />
                   </div>
                 </Zoomable>
@@ -68,7 +63,7 @@ export default function BoundaryAudit() {
                 return (
                   <Reveal key={c.title} delay={i * 80}>
                     <article className="card h-full">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-leaf-50 text-leaf-700">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-[3px] bg-leaf-50 text-leaf-700">
                         <Icon className="h-6 w-6" aria-hidden="true" />
                       </div>
                       <h4 className="mt-4 font-display text-lg font-bold text-forest-800">{c.title}</h4>
@@ -85,7 +80,7 @@ export default function BoundaryAudit() {
             as a second add-on strip down in Pricing saying the same thing twice. */}
         <Reveal>
           <div className="mt-10 flex flex-col items-center gap-5 text-center">
-            <p className="rounded-2xl bg-cream px-5 py-3 text-[15px] font-semibold text-forest-800">
+            <p className="rounded-[3px] bg-cream px-5 py-3 text-[15px] font-semibold text-forest-800">
               {b.priceLine}
             </p>
             <a href="#contact" className="btn-primary">

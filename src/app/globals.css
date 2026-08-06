@@ -40,11 +40,15 @@
   /* Neutral surface */
   --color-cream: #f7f9f4;
 
-  --font-display: var(--font-sora);
+  --font-display: var(--font-archivo);
   --font-sans: var(--font-inter);
+  --font-mono: var(--font-plex-mono);
 
-  --shadow-soft: 0 1px 2px rgba(16, 46, 32, 0.04), 0 8px 24px rgba(16, 46, 32, 0.06);
-  --shadow-card: 0 1px 3px rgba(16, 46, 32, 0.06), 0 12px 32px rgba(16, 46, 32, 0.08);
+  /* Hairlines and flat ink do the work that drop shadows used to. Kept as tokens
+     because a few places (the lightbox, sticky header) still want real elevation. */
+  --shadow-soft: 0 1px 0 rgba(22, 63, 43, 0.06);
+  --shadow-card: 0 1px 0 rgba(22, 63, 43, 0.08);
+  --shadow-lift: 0 2px 0 var(--color-forest-800);
 }
 
 :root {
@@ -89,29 +93,115 @@ section[id] {
     @apply mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8;
   }
 
+  /* Section kicker: a surveyor's margin note, not a pill badge. */
   .eyebrow {
-    @apply inline-flex items-center gap-2 rounded-full border border-leaf-200 bg-leaf-50 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-forest-700;
+    @apply inline-flex items-center gap-2.5 font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-forest-500;
+  }
+  .eyebrow::before {
+    content: "";
+    @apply block h-px w-6 bg-leaf-500;
   }
 
-  .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60;
+  /* Buttons are stamped, not pillowed: 2px corners, a hard 2px underside instead
+     of a blur, and the press actually moves the button onto its shadow. */
+  /* Tailwind v4 can't @apply one component class inside another, so the shared base
+     is repeated per variant rather than composed. min-h-[44px] is the touch floor. */
+  .btn,
+  .btn-primary,
+  .btn-dark,
+  .btn-ghost {
+    @apply inline-flex min-h-[44px] cursor-pointer items-center justify-center gap-2 rounded-[3px] px-6 py-3.5 font-mono text-[12.5px] font-medium uppercase tracking-[0.1em] transition-[background-color,color,border-color,transform,box-shadow] duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60;
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60 bg-leaf-500 text-white shadow-soft hover:bg-leaf-600 hover:shadow-card active:scale-[0.98];
+    @apply bg-leaf-500 text-white;
+    box-shadow: 0 2px 0 var(--color-leaf-700);
+  }
+  .btn-primary:hover {
+    @apply bg-leaf-600;
+  }
+  .btn-primary:active {
+    transform: translateY(2px);
+    box-shadow: 0 0 0 var(--color-leaf-700);
   }
 
   .btn-dark {
-    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60 bg-forest-700 text-white hover:bg-forest-800 active:scale-[0.98];
+    @apply bg-forest-800 text-white;
+    box-shadow: 0 2px 0 var(--color-forest-900);
+  }
+  .btn-dark:hover {
+    @apply bg-forest-700;
+  }
+  .btn-dark:active {
+    transform: translateY(2px);
+    box-shadow: 0 0 0 var(--color-forest-900);
   }
 
   .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60 border border-forest-200 bg-white text-forest-700 hover:border-forest-300 hover:bg-forest-50 active:scale-[0.98];
+    @apply border border-forest-300 bg-transparent text-forest-800 hover:border-forest-800 hover:bg-forest-50;
   }
 
-  .card {
-    @apply rounded-2xl border border-forest-100 bg-white p-6 shadow-soft;
+  /* Compact variant for the sticky header, which is pointer-only (lg and up) —
+     the 44px touch floor still applies to every button a thumb can reach. */
+  .btn-sm {
+    @apply min-h-0 px-4 py-2.5 text-[11px] tracking-[0.08em];
   }
+
+  /* Flat, hairline-ruled panel — a data sheet, not a floating card. */
+  .card {
+    @apply rounded-[3px] border border-forest-200 bg-white p-6;
+  }
+
+  /* Map-frame corner ticks for the panels that carry the argument. */
+  .ticked {
+    @apply relative;
+  }
+  .ticked::before,
+  .ticked::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-color: var(--color-leaf-500);
+    pointer-events: none;
+  }
+  .ticked::before {
+    top: -1px;
+    left: -1px;
+    border-top: 2px solid;
+    border-left: 2px solid;
+  }
+  .ticked::after {
+    right: -1px;
+    bottom: -1px;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+  }
+
+  /* Instrument readout: figures line up in columns, like a gauge. */
+  .readout {
+    @apply font-mono tabular-nums tracking-tight;
+  }
+}
+
+/* ----------------------------------------------------------------------------
+   Surfaces: a map graticule instead of gradient blobs
+---------------------------------------------------------------------------- */
+.graticule {
+  background-image:
+    linear-gradient(to right, rgba(22, 63, 43, 0.055) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(22, 63, 43, 0.055) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+.graticule-fade {
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 30%, #000 40%, transparent 100%);
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 30%, #000 40%, transparent 100%);
+}
+
+/* Hairline rule used to separate bands without stacking more vertical padding. */
+.rule {
+  @apply border-t border-forest-200;
 }
 
 /* ----------------------------------------------------------------------------

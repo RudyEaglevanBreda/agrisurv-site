@@ -29,7 +29,7 @@ export default function LayerSwitcher() {
   return (
     <div>
       <Zoomable src={LAYERS[active].src} alt={labelFor(LAYERS[active].key)}>
-        <div className="relative aspect-square overflow-hidden rounded-2xl border border-forest-100 bg-forest-900 shadow-soft">
+        <div className="relative aspect-square overflow-hidden rounded-[3px] border border-forest-200 bg-forest-900 shadow-none">
           {LAYERS.map((l, i) => (
             // eslint-disable-next-line @next/next/no-img-element
             <img
@@ -42,14 +42,14 @@ export default function LayerSwitcher() {
               }`}
             />
           ))}
-          <div className="absolute left-3 top-3 rounded-full bg-black/55 px-3 py-1 text-xs font-semibold text-white backdrop-blur-sm">
+          <div className="absolute left-3 top-3 rounded-[2px] bg-forest-900/75 px-2.5 py-1 font-mono text-[11px] font-medium uppercase tracking-[0.12em] text-white backdrop-blur-sm">
             {labelFor(LAYERS[active].key)}
           </div>
         </div>
       </Zoomable>
 
       <div
-        className="mt-3 inline-flex flex-wrap gap-1 rounded-full border border-forest-200 bg-white p-1"
+        className="mt-3 inline-flex flex-wrap gap-1 rounded-[2px] border border-forest-200 bg-white p-1"
         role="group"
       >
         {LAYERS.map((l, i) => (
@@ -58,7 +58,7 @@ export default function LayerSwitcher() {
             type="button"
             onClick={() => setActive(i)}
             aria-pressed={i === active}
-            className={`rounded-full px-3 py-1.5 text-xs font-semibold transition-colors ${
+            className={`rounded-[1px] px-3 py-1.5 font-mono text-[11.5px] font-medium uppercase tracking-[0.08em] transition-colors ${
               i === active
                 ? "bg-leaf-500 text-white"
                 : "text-forest-600 hover:text-forest-900"

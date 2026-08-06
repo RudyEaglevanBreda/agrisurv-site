@@ -37,7 +37,7 @@ export default function Equipment() {
               return (
                 <Reveal key={s.label} delay={(i % 2) * 70}>
                   <div className="card h-full">
-                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-forest-50 text-forest-700">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-[3px] bg-forest-50 text-forest-700">
                       <Icon className="h-5 w-5" aria-hidden="true" />
                     </div>
                     <p className="mt-4 text-xs font-semibold uppercase tracking-wide text-leaf-700">

@@ -2,6 +2,7 @@
 
 import { ArrowRight, MessageCircle, Tractor, Usb } from "lucide-react";
 import Reveal from "./Reveal";
+import SectionHead from "./SectionHead";
 import Zoomable from "./Zoomable";
 import { useLang } from "./LanguageProvider";
 import { PORTAL_REGISTER_URL } from "../lib/portal";
@@ -38,26 +39,20 @@ export default function AppTour() {
   return (
     <section id="app" className="bg-cream py-20 sm:py-28">
       <div className="container-page">
-        <div className="mx-auto max-w-2xl text-center">
-          <span className="eyebrow">{a.eyebrow}</span>
-          <h2 className="mt-4 font-display text-3xl font-bold tracking-tight text-forest-800 sm:text-4xl">
-            {a.heading}
-          </h2>
-          <p className="mt-4 text-lg text-forest-600">{a.sub}</p>
-        </div>
+        <SectionHead index="03" kicker={a.eyebrow} heading={a.heading} sub={a.sub} />
 
         <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
           {a.phones.map((ph, i) => (
             <Reveal key={ph.title} delay={(i % 4) * 80}>
               <figure className="h-full">
                 <Zoomable src={PHONE_SHOTS[i]} alt={ph.title}>
-                  <div className="overflow-hidden rounded-[1.75rem] border-[6px] border-forest-800 bg-forest-800 shadow-card transition-shadow duration-300 hover:shadow-lg">
+                  <div className="overflow-hidden rounded-[4px] border-[6px] border-forest-800 bg-forest-800 shadow-none transition-shadow duration-300 hover:border-forest-400">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={PHONE_SHOTS[i]}
                       alt={ph.title}
                       loading="lazy"
-                      className="block w-full rounded-[1.4rem]"
+                      className="block w-full rounded-[2px]"
                     />
                   </div>
                 </Zoomable>
@@ -71,9 +66,9 @@ export default function AppTour() {
         </div>
 
         <Reveal>
-          <div className="mt-14 grid items-center gap-8 rounded-3xl border border-forest-100 bg-white p-6 shadow-soft sm:p-8 lg:grid-cols-[1.4fr_1fr]">
+          <div className="mt-14 grid items-center gap-8 rounded-[3px] border border-forest-200 bg-white p-6 shadow-none sm:p-8 lg:grid-cols-[1.4fr_1fr]">
             <Zoomable src="/process/app-desktop-field.webp" alt={a.desktop.title}>
-              <div className="overflow-hidden rounded-2xl border border-forest-100 shadow-soft">
+              <div className="overflow-hidden rounded-[3px] border border-forest-200 shadow-none">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/process/app-desktop-field.webp"
@@ -114,7 +109,7 @@ export default function AppTour() {
                   <Reveal key={s.title} delay={i * 80}>
                     <article className="card h-full">
                       <div className="flex items-center gap-3">
-                        <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-leaf-50 text-leaf-700">
+                        <div className="flex h-12 w-12 items-center justify-center rounded-[3px] bg-leaf-50 text-leaf-700">
                           <Icon className="h-6 w-6" aria-hidden="true" />
                         </div>
                         <span className="font-display text-sm font-bold text-forest-300">
@@ -131,7 +126,7 @@ export default function AppTour() {
               })}
             </div>
 
-            <div className="mt-8 rounded-2xl border border-forest-100 bg-white p-6 shadow-soft sm:p-7">
+            <div className="mt-8 rounded-[3px] border border-forest-200 bg-white p-6 shadow-none sm:p-7">
               <p className="text-sm font-semibold uppercase tracking-wider text-forest-500">
                 {a.share.systemsHeading}
               </p>
@@ -139,7 +134,7 @@ export default function AppTour() {
                 {SYSTEMS.map((s) => (
                   <span
                     key={s}
-                    className="rounded-full border border-forest-100 bg-cream px-3.5 py-1.5 text-[13px] font-medium text-forest-700"
+                    className="rounded-[2px] border border-forest-200 bg-cream px-3 py-1.5 font-mono text-[12px] font-medium text-forest-700"
                   >
                     {s}
                   </span>

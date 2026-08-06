@@ -22,7 +22,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="border-t border-forest-100 bg-cream">
+    <footer className="border-t border-forest-200 bg-cream">
       <div className="container-page py-14">
         <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
           <div className="max-w-sm">
@@ -106,7 +106,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-forest-100 pt-6 text-sm text-forest-500 sm:flex-row">
+        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-forest-200 pt-6 text-sm text-forest-500 sm:flex-row">
           <p>
             © {year} {site.name}. {t.footer.rights}
           </p>

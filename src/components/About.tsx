@@ -32,7 +32,7 @@ export default function About() {
               return (
                 <Reveal key={v.title} delay={(i % 2) * 80}>
                   <div className="card h-full bg-cream">
-                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white text-leaf-700 shadow-soft">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-[3px] bg-white text-leaf-700 shadow-none">
                       <Icon className="h-5 w-5" aria-hidden="true" />
                     </div>
                     <h3 className="mt-4 font-display text-base font-bold text-forest-800">

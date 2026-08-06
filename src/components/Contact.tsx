@@ -113,7 +113,7 @@ export default function Contact() {
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           {/* Left: invitation + methods */}
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full border border-leaf-400/30 bg-leaf-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-leaf-300">
+            <span className="inline-flex items-center gap-2.5 font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-leaf-300">
               {t.contact.eyebrow}
             </span>
             <h2 className="mt-4 font-display text-3xl font-bold tracking-tight sm:text-4xl">
@@ -125,7 +125,7 @@ export default function Contact() {
               {contactMethods.map((m) => {
                 const content = (
                   <>
-                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-leaf-300">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-[3px] bg-white/10 text-leaf-300">
                       <m.icon className="h-5 w-5" aria-hidden="true" />
                     </div>
                     <div className="min-w-0">
@@ -145,14 +145,14 @@ export default function Contact() {
                     {...(m.external
                       ? { target: "_blank", rel: "noopener noreferrer" }
                       : {})}
-                    className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-3 transition-colors hover:bg-white/10"
+                    className="flex items-center gap-3 rounded-[3px] border border-white/10 bg-white/5 p-3 transition-colors hover:bg-white/10"
                   >
                     {content}
                   </a>
                 ) : (
                   <div
                     key={m.label}
-                    className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-3"
+                    className="flex items-center gap-3 rounded-[3px] border border-white/10 bg-white/5 p-3"
                   >
                     {content}
                   </div>
@@ -172,7 +172,7 @@ export default function Contact() {
           </div>
 
           {/* Right: form */}
-          <div className="rounded-3xl bg-white p-6 text-forest-800 shadow-card sm:p-8">
+          <div className="rounded-[3px] bg-white p-6 text-forest-800 shadow-none sm:p-8">
             {status === "success" ? (
               <div className="flex h-full flex-col items-center justify-center py-10 text-center">
                 <CheckCircle2 className="h-14 w-14 text-leaf-500" aria-hidden="true" />
@@ -267,14 +267,14 @@ export default function Contact() {
                     required
                     rows={4}
                     placeholder={t.contact.placeholders.message}
-                    className="w-full rounded-xl border border-forest-200 bg-cream px-3.5 py-2.5 text-[15px] text-forest-800 placeholder:text-forest-400 focus:border-leaf-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-leaf-500/30"
+                    className="w-full rounded-[3px] border border-forest-200 bg-cream px-3.5 py-2.5 text-[15px] text-forest-800 placeholder:text-forest-400 focus:border-leaf-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-leaf-500/30"
                   />
                 </div>
 
                 {status === "error" && (
                   <p
                     role="alert"
-                    className="rounded-xl bg-red-50 px-3.5 py-2.5 text-sm font-medium text-red-700"
+                    className="rounded-[3px] bg-red-50 px-3.5 py-2.5 text-sm font-medium text-red-700"
                   >
                     {t.contact.errorPre}
                     <a href={mailtoLink("Enquiry")} className="underline">
@@ -361,7 +361,7 @@ function Field({
         placeholder={placeholder}
         autoComplete={autoComplete}
         min={min}
-        className="w-full rounded-xl border border-forest-200 bg-cream px-3.5 py-2.5 text-[15px] text-forest-800 placeholder:text-forest-400 focus:border-leaf-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-leaf-500/30"
+        className="w-full rounded-[3px] border border-forest-200 bg-cream px-3.5 py-2.5 text-[15px] text-forest-800 placeholder:text-forest-400 focus:border-leaf-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-leaf-500/30"
       />
     </div>
   );

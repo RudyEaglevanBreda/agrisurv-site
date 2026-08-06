@@ -42,7 +42,7 @@ export default function Header() {
     <header
       className={`sticky top-0 z-50 w-full transition-colors duration-300 ${
         scrolled
-          ? "border-b border-forest-100 bg-white/90 backdrop-blur-md"
+          ? "border-b border-forest-200 bg-white/90 backdrop-blur-md"
           : "border-b border-transparent bg-white/0"
       }`}
     >
@@ -58,21 +58,21 @@ export default function Header() {
             <a
               key={item.href}
               href={item.href}
-              className="rounded-full px-3.5 py-2 text-sm font-medium text-forest-700 transition-colors hover:bg-forest-50 hover:text-forest-900"
+              className="rounded-[2px] px-3 py-2 text-[13.5px] font-medium text-forest-700 transition-colors hover:bg-forest-50 hover:text-forest-900"
             >
               {item.label}
             </a>
           ))}
         </nav>
 
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="hidden items-center gap-2.5 lg:flex">
           <LanguageToggle />
-          <a href="#contact" className="btn-ghost">
+          <a href="#contact" className="btn-ghost btn-sm">
             {t.cta.quote}
           </a>
-          <a href={PORTAL_REGISTER_URL} className="btn-primary">
-            {t.cta.portal}
-            <ArrowRight className="h-4 w-4" aria-hidden="true" />
+          <a href={PORTAL_REGISTER_URL} className="btn-primary btn-sm">
+            {t.cta.portalShort}
+            <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
           </a>
         </div>
 
@@ -82,7 +82,7 @@ export default function Header() {
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
-            className="inline-flex h-11 w-11 items-center justify-center rounded-full text-forest-800 transition-colors hover:bg-forest-50"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-[2px] text-forest-800 transition-colors hover:bg-forest-50"
             aria-expanded={open}
             aria-controls="mobile-menu"
             aria-label={open ? t.cta.closeMenu : t.cta.openMenu}
@@ -96,7 +96,7 @@ export default function Header() {
       {open && (
         <div
           id="mobile-menu"
-          className="border-t border-forest-100 bg-white lg:hidden"
+          className="border-t border-forest-200 bg-white lg:hidden"
         >
           <nav className="container-page flex flex-col py-4" aria-label="Mobile">
             {navItems.map((item) => (
@@ -104,7 +104,7 @@ export default function Header() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="rounded-xl px-3 py-3 text-base font-medium text-forest-800 transition-colors hover:bg-forest-50"
+                className="rounded-[3px] px-3 py-3 text-base font-medium text-forest-800 transition-colors hover:bg-forest-50"
               >
                 {item.label}
               </a>
