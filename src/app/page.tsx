@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import HowItWorks from "@/components/HowItWorks";
 import AppTour from "@/components/AppTour";
+import BoundaryAudit from "@/components/BoundaryAudit";
 import SampleReport from "@/components/SampleReport";
 import Equipment from "@/components/Equipment";
 import Pricing from "@/components/Pricing";
@@ -44,6 +45,7 @@ export default function Home() {
         <Services />
         <HowItWorks />
         <AppTour />
+        <BoundaryAudit />
         <SampleReport />
         <Equipment />
         <Pricing />

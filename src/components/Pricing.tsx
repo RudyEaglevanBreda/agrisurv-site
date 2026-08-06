@@ -83,6 +83,33 @@ export default function Pricing() {
           })}
         </div>
 
+        {/* Add-on: sold alongside a survey rather than as a fourth tier, so the three-tier
+            story stays intact. */}
+        <Reveal>
+          <div className="mt-6 flex flex-col gap-5 rounded-3xl border border-forest-100 bg-white p-7 shadow-soft sm:flex-row sm:items-center sm:gap-8">
+            <div className="flex-1">
+              <span className="inline-flex w-fit items-center rounded-full bg-forest-800 px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
+                {t.pricing.addon.label}
+              </span>
+              <h3 className="mt-3 font-display text-lg font-bold text-forest-800">
+                {t.pricing.addon.name}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-forest-600">
+                {t.pricing.addon.blurb}
+              </p>
+            </div>
+            <div className="flex flex-none flex-col items-start gap-3 sm:items-end">
+              <span className="font-display text-2xl font-extrabold text-forest-800">
+                {t.pricing.addon.price}
+              </span>
+              <a href="#boundary" className="btn-dark">
+                {t.pricing.addon.cta}
+                <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </a>
+            </div>
+          </div>
+        </Reveal>
+
         <p className="mt-8 text-center text-sm text-forest-500">
           {t.pricing.disclaimer}
         </p>

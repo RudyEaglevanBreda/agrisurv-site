@@ -180,6 +180,43 @@ const en = {
     ],
   },
 
+  boundary: {
+    eyebrow: "Know your hectares",
+    heading: "How big is that block, really?",
+    sub: "Most farm records come from a title deed, a memory, or a line traced on a satellite photo. Everything you buy and every rand you count per hectare sits on top of that one number — and it is usually wrong.",
+    phones: [
+      {
+        title: "The number you farm on",
+        body: "Every field carries a size in the app. Until you measure it, that figure came from a deed or a rough outline — and it drives your inputs, your contractor invoices and your yield per hectare.",
+      },
+      {
+        title: "What the drone actually measured",
+        body: "Green is the boundary on record. Amber is the crop edge our survey traced at centimetre level. In our own demo pivot the record said 93.3 ha; the growing crop was 69.6 ha — a quarter of the field, billed and sprayed as if it were planted.",
+      },
+      {
+        title: "Yours to fine-tune",
+        body: "Zoom in on any corner and drag it. Add a corner where a headland cuts in, pull the line off a track or a dam. When it fits, one tap updates the size everywhere in the app.",
+      },
+    ],
+    costHeading: "What a wrong hectare costs you",
+    costs: [
+      {
+        title: "You over-order every season",
+        body: "Fertiliser, chemical and seed are all bought per hectare. If your block reads 25% bigger than it is, you buy 25% more than the land can use — season after season.",
+      },
+      {
+        title: "You over-apply per real hectare",
+        body: "Spread a fixed tank over fewer hectares than you planned for and the rate on the ground goes up. That is money on the soil and, for some products, a compliance problem.",
+      },
+      {
+        title: "Your benchmarks are off",
+        body: "Tons per hectare, cost per hectare, margin per hectare — every figure you compare between blocks and between seasons is divided by a number that was never measured.",
+      },
+    ],
+    note: "This gives you a working boundary for farming maths — the true cropped area of the block. It is not a legal survey; cadastral boundaries stay the work of a licensed land surveyor.",
+    cta: "Ask for a boundary audit",
+  },
+
   pricing: {
     eyebrow: "Pricing",
     heading: "Simple, per-hectare pricing",
@@ -187,6 +224,13 @@ const en = {
     popular: "Most popular",
     disclaimer:
       "Indicative rates in ZAR, excl. VAT. Minimum call-out applies. Final quote depends on area, location and flight frequency.",
+    addon: {
+      label: "Add-on",
+      name: "Boundary & hectare audit",
+      price: "Quoted per farm",
+      blurb: "We measure the true cropped area of every block from the survey imagery and correct the sizes your whole operation is planned on. Included with any survey — or flown on its own as a boundary-only mapping job.",
+      cta: "Ask for a boundary audit",
+    },
     tiers: [
       {
         name: "Single Survey",
@@ -666,6 +710,43 @@ const af: Dict = {
     ],
   },
 
+  boundary: {
+    eyebrow: "Ken jou hektare",
+    heading: "Hoe groot is daardie blok régtig?",
+    sub: "Die meeste plaasrekords kom uit 'n transportakte, uit geheue, of uit 'n lyn wat op 'n satellietfoto getrek is. Alles wat jy koop en elke rand wat jy per hektaar tel, rus op daardie een syfer — en dit is gewoonlik verkeerd.",
+    phones: [
+      {
+        title: "Die syfer waarop jy boer",
+        body: "Elke land dra 'n grootte in die app. Totdat jy dit meet, kom daardie syfer uit 'n akte of 'n growwe buitelyn — en dit dryf jou insette, jou kontrakteursrekeninge en jou opbrengs per hektaar.",
+      },
+      {
+        title: "Wat die drone werklik gemeet het",
+        body: "Groen is die grens op rekord. Amber is die gewasrand wat ons opname op sentimetervlak getrek het. In ons eie demonstrasiespilpunt het die rekord 93,3 ha gesê; die groeiende gewas was 69,6 ha — 'n kwart van die land wat gefaktureer en gespuit is asof dit geplant is.",
+      },
+      {
+        title: "Joune om fyn te stel",
+        body: "Zoem in op enige hoek en sleep dit. Voeg 'n hoek by waar 'n wenakker insny, trek die lyn weg van 'n pad of 'n dam. Wanneer dit pas, werk een tik die grootte oral in die app by.",
+      },
+    ],
+    costHeading: "Wat 'n verkeerde hektaar jou kos",
+    costs: [
+      {
+        title: "Jy oorbestel elke seisoen",
+        body: "Kunsmis, chemie en saad word almal per hektaar gekoop. As jou blok 25% groter lees as wat dit is, koop jy 25% meer as wat die land kan gebruik — seisoen ná seisoen.",
+      },
+      {
+        title: "Jy pas te veel toe per werklike hektaar",
+        body: "Sprei 'n vaste tenk oor minder hektare as wat jy beplan het en die tempo op die grond gaan op. Dit is geld op die grond en, vir sommige produkte, 'n voldoeningsprobleem.",
+      },
+      {
+        title: "Jou maatstawwe is skeef",
+        body: "Ton per hektaar, koste per hektaar, marge per hektaar — elke syfer wat jy tussen blokke en tussen seisoene vergelyk, word gedeel deur 'n getal wat nooit gemeet is nie.",
+      },
+    ],
+    note: "Dit gee jou 'n werksgrens vir boerderywiskunde — die ware beplante oppervlakte van die blok. Dit is nie 'n wetlike opmeting nie; kadastrale grense bly die werk van 'n gelisensieerde landmeter.",
+    cta: "Vra vir 'n grensoudit",
+  },
+
   pricing: {
     eyebrow: "Pryse",
     heading: "Eenvoudige pryse, per hektaar",
@@ -673,6 +754,13 @@ const af: Dict = {
     popular: "Gewildste",
     disclaimer:
       "Aanduidende tariewe in ZAR, BTW uitgesluit. Minimum uitroeptarief geld. Finale kwotasie hang af van oppervlakte, ligging en vlugfrekwensie.",
+    addon: {
+      label: "Bykomend",
+      name: "Grens- en hektaaroudit",
+      price: "Kwotasie per plaas",
+      blurb: "Ons meet die ware beplante oppervlakte van elke blok uit die opnamebeelde en korrigeer die groottes waarop jou hele bedryf beplan word. Ingesluit by enige opname — of op sy eie gevlieg as 'n grens-alleen karteringstaak.",
+      cta: "Vra vir 'n grensoudit",
+    },
     tiers: [
       {
         name: "Enkele opname",
